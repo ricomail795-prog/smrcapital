@@ -45,9 +45,10 @@
       position:sticky;
       top:0;
       z-index:100;
-      background:rgba(6,17,31,.96);
+      background:#ffffff;
       backdrop-filter:blur(14px);
-      border-bottom:1px solid rgba(211,154,44,.30);
+      border-bottom:1px solid rgba(6,17,31,.14);
+      box-shadow:0 4px 18px rgba(6,17,31,.08);
     }
 
     .nav{
@@ -75,6 +76,7 @@
       font-size:.85rem;
       font-weight:800;
       letter-spacing:.04em;
+      color:var(--navy);
     }
 
     .nav-links a{
@@ -82,7 +84,7 @@
       padding:38px 0 29px;
     }
 
-    .nav-links a:hover{color:var(--gold-soft)}
+    .nav-links a:hover{color:var(--navy-3)}
     .nav-links a.active:after,
     .nav-links a:hover:after{
       content:"";
@@ -97,8 +99,8 @@
     .menu-btn{
       display:none;
       border:1px solid var(--line);
-      color:white;
-      background:transparent;
+      color:var(--navy);
+      background:#ffffff;
       border-radius:8px;
       padding:8px 12px;
       cursor:pointer;
@@ -307,6 +309,54 @@
     section.content{
       padding:82px 0;
     }
+
+    .section-light{
+      background:#ffffff;
+      color:var(--navy);
+    }
+
+    .section-light .section-head p,
+    .section-light .panel p{
+      color:#596679;
+    }
+
+    .section-light .panel{
+      background:#f7f9fc;
+      border-color:#d9e0e8;
+      color:var(--navy);
+      box-shadow:0 12px 34px rgba(6,17,31,.06);
+    }
+
+    .section-light .panel strong{
+      color:var(--navy) !important;
+    }
+
+    .section-light .eyebrow{
+      color:#a36f19;
+    }
+
+    .section-light .process-step,
+    .section-light details{
+      background:#f7f9fc;
+      border-color:#d9e0e8;
+      color:var(--navy);
+    }
+
+    .section-light .process-step p,
+    .section-light details p{
+      color:#596679;
+    }
+
+    .section-blue{
+      background:var(--navy);
+      color:var(--white);
+    }
+
+    .section-blue .section-head p,
+    .section-blue .panel p{
+      color:var(--muted);
+    }
+
 
     .section-head{
       max-width:800px;
@@ -520,8 +570,10 @@
         padding:16px;
         flex-direction:column;
         align-items:stretch;
-        background:#06111f;
-        border:1px solid var(--line);
+        background:#ffffff;
+        border:1px solid rgba(6,17,31,.14);
+        color:var(--navy);
+        box-shadow:0 12px 30px rgba(6,17,31,.12);
       }
       .nav-links.open{display:flex}
       .nav-links a{padding:10px 4px}
@@ -634,7 +686,7 @@
       </div>
     </section>
 
-    <section id="seafarers" class="content">
+    <section id="seafarers" class="content section-light">
       <div class="container split">
         <div>
           <div class="eyebrow">For Seafarers</div>
@@ -654,7 +706,7 @@
       </div>
     </section>
 
-    <section id="employers" class="content">
+    <section id="employers" class="content section-blue">
       <div class="container split">
         <div class="panel">
           <h3>For Employers & Operators</h3>
@@ -674,7 +726,7 @@
       </div>
     </section>
 
-    <section id="process" class="content">
+    <section id="process" class="content section-light">
       <div class="container">
         <div class="section-head">
           <div class="eyebrow">How It Works</div>
@@ -712,7 +764,7 @@
       </div>
     </section>
 
-    <section id="model" class="content">
+    <section id="model" class="content section-blue">
       <div class="container split">
         <div>
           <div class="eyebrow">Capital-Funded Recovery Model</div>
@@ -733,7 +785,7 @@
       </div>
     </section>
 
-    <section class="content">
+    <section class="content section-light">
       <div class="container">
         <div class="section-head">
           <div class="eyebrow">Indicative Tool</div>
@@ -787,7 +839,7 @@
       </div>
     </section>
 
-    <section class="content">
+    <section class="content section-blue">
       <div class="container">
         <div class="section-head">
           <div class="eyebrow">Frequently Asked Questions</div>
@@ -833,7 +885,7 @@
       </div>
     </section>
 
-    <section id="legal" class="content">
+    <section id="legal" class="content section-light">
       <div class="container">
         <div class="section-head">
           <div class="eyebrow">Legal Notice</div>
