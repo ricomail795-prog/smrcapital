@@ -571,6 +571,24 @@
       gap:20px;
     }
 
+
+    .lang-select{
+      border:1px solid rgba(6,17,31,.18);
+      background:#ffffff;
+      color:var(--navy);
+      border-radius:6px;
+      padding:8px 10px;
+      font-weight:700;
+      font-size:.82rem;
+      cursor:pointer;
+    }
+
+    .lang-select:focus{
+      outline:none;
+      border-color:var(--gold);
+      box-shadow:0 0 0 3px rgba(211,154,44,.12);
+    }
+
     @media (max-width:1020px){
       .nav-links{
         display:none;
@@ -619,13 +637,25 @@
       </a>
 
       <nav class="nav-links" id="navLinks">
-        <a class="active" href="#top">HOME</a>
-        <a href="#seafarers">FOR SEAFARERS</a>
-        <a href="#employers">EMPLOYERS</a>
-        <a href="#process">PROCESS</a>
-        <a href="#model">RECOVERY MODEL</a>
-        <a href="#contact">CONTACT</a>
+        <a class="active" href="#top" data-i18n="nav_home">HOME</a>
+        <a href="#seafarers" data-i18n="nav_seafarers">FOR SEAFARERS</a>
+        <a href="#employers" data-i18n="nav_employers">EMPLOYERS</a>
+        <a href="#process" data-i18n="nav_process">PROCESS</a>
+        <a href="#model" data-i18n="nav_model">RECOVERY MODEL</a>
+        <a href="#contact" data-i18n="nav_contact">CONTACT</a>
       </nav>
+
+
+      <select id="languageSelect" class="lang-select" aria-label="Language">
+        <option value="en">English</option>
+        <option value="id">Bahasa Indonesia</option>
+        <option value="tl">Filipino</option>
+        <option value="pl">Polski</option>
+        <option value="ro">Română</option>
+        <option value="uk">Українська</option>
+        <option value="es">Español</option>
+        <option value="pt">Português</option>
+      </select>
 
       <button class="menu-btn" id="menuBtn">Menu</button>
     </div>
@@ -635,24 +665,24 @@
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <div class="eyebrow">Dublin • Ireland • Maritime Sector</div>
-          <h1>Maritime Wage <span>Recovery & Claims</span> Administration</h1>
-          <p class="lead">Evidence-led recovery of unpaid maritime employment entitlements.</p>
+          <div class="eyebrow"><span data-i18n="hero_eyebrow">Dublin • Ireland • Maritime Sector</span></div>
+          <h1 data-i18n-html="hero_title_html">Maritime Wage <span>Recovery & Claims</span> Administration</h1>
+          <p class="lead"><span data-i18n="hero_lead"><span data-i18n="evidence_stage_title">Evidence</span>-led recovery of unpaid maritime employment entitlements.</span></p>
           <p class="hero-copy">
-            SMR Capital provides specialist forensic payroll auditing, maritime claims administration and commercial recovery support for seafarers and maritime stakeholders.
+            <span data-i18n="hero_copy">SMR Capital provides specialist forensic payroll auditing, maritime claims administration and commercial recovery support for seafarers and maritime stakeholders.</span>
           </p>
 
           <div class="hero-actions">
-            <a href="#seafarers" class="btn btn-primary">FOR SEAFARERS <span>→</span></a>
-            <a href="#employers" class="btn btn-secondary">FOR EMPLOYERS <span>→</span></a>
-            <a href="#contact" class="btn btn-secondary">SUBMIT CASE <span>→</span></a>
+            <a href="#seafarers" class="btn btn-primary" data-i18n-html="btn_seafarers_html">FOR SEAFARERS <span>→</span></a>
+            <a href="#employers" class="btn btn-secondary" data-i18n-html="btn_employers_html">FOR EMPLOYERS <span>→</span></a>
+            <a href="#contact" class="btn btn-secondary" data-i18n-html="btn_submit_html">SUBMIT CASE <span>→</span></a>
           </div>
         </div>
 
         <div class="hero-side">
           <div class="assurance">
-            <strong>🛡 No upfront cost to seafarers</strong>
-            <p>Assessment is free and confidential. You pay nothing to have your case reviewed.</p>
+            <strong><span data-i18n="assurance_title">🛡 No upfront cost to seafarers</span></strong>
+            <p><span data-i18n="assurance_text">Assessment is free and confidential. You pay nothing to have your case reviewed.</span></p>
           </div>
         </div>
       </div>
@@ -662,37 +692,37 @@
       <div class="service-grid">
         <article class="service">
           <div class="service-icon">⚖</div>
-          <h3>For Seafarers</h3>
-          <p>We review employment records, quantify unpaid entitlements and support structured recovery.</p>
-          <a class="learn" href="#seafarers">Learn More →</a>
+          <h3><span data-i18n="service_seafarers_title">For Seafarers</span></h3>
+          <p><span data-i18n="service_seafarers_text">We review employment records, quantify unpaid entitlements and support structured recovery.</span></p>
+          <a class="learn" href="#seafarers"><span data-i18n="learn_more">Learn More →</span></a>
         </article>
 
         <article class="service">
           <div class="service-icon">⚙</div>
-          <h3>For Employers</h3>
-          <p>Resolve historic wage liability exposure through structured and evidence-led commercial solutions.</p>
-          <a class="learn" href="#employers">Learn More →</a>
+          <h3><span data-i18n="service_employers_title">For Employers</span></h3>
+          <p><span data-i18n="service_employers_text">Resolve historic wage liability exposure through structured and evidence-led commercial solutions.</span></p>
+          <a class="learn" href="#employers"><span data-i18n="learn_more">Learn More →</span></a>
         </article>
 
         <article class="service">
           <div class="service-icon">⌕</div>
-          <h3>Forensic Audit</h3>
-          <p>We reconstruct payroll data, validate evidence and calculate potential financial shortfalls.</p>
-          <a class="learn" href="#process">Learn More →</a>
+          <h3><span data-i18n="service_audit_title">Forensic <span data-i18n="audit_stage_title">Audit</span></span></h3>
+          <p><span data-i18n="service_audit_text">We reconstruct payroll data, validate evidence and calculate potential financial shortfalls.</span></p>
+          <a class="learn" href="#process"><span data-i18n="learn_more">Learn More →</span></a>
         </article>
 
         <article class="service">
           <div class="service-icon">🤝</div>
-          <h3>Commercial Resolution</h3>
-          <p>We prioritise structured reconciliation before formal escalation where appropriate.</p>
-          <a class="learn" href="#model">Learn More →</a>
+          <h3><span data-i18n="service_resolution_title">Commercial <span data-i18n="resolution_stage_title">Resolution</span></span></h3>
+          <p><span data-i18n="service_resolution_text">We prioritise structured reconciliation before formal escalation where appropriate.</span></p>
+          <a class="learn" href="#model"><span data-i18n="learn_more">Learn More →</span></a>
         </article>
 
         <article class="service">
           <div class="service-icon">🏛</div>
-          <h3>Legal Escalation</h3>
-          <p>Cases may be escalated through independent legal practitioners where formal legal action is required.</p>
-          <a class="learn" href="#legal">Learn More →</a>
+          <h3><span data-i18n="service_legal_title">Legal <span data-i18n="escalation_stage_title">Escalation</span></span></h3>
+          <p><span data-i18n="service_legal_text">Cases may be escalated through independent legal practitioners where formal legal action is required.</span></p>
+          <a class="learn" href="#legal"><span data-i18n="learn_more">Learn More →</span></a>
         </article>
       </div>
     </section>
@@ -700,19 +730,19 @@
     <section id="seafarers" class="content section-light">
       <div class="container split">
         <div>
-          <div class="eyebrow">For Seafarers</div>
+          <div class="eyebrow"><span data-i18n="service_seafarers_title">For Seafarers</span></div>
           <div class="section-head">
-            <h2>Understand what you may actually be owed.</h2>
+            <h2><span data-i18n="seafarers_heading">Understand what you may actually be owed.</span></h2>
             <p>
-              SMR reviews employment agreements, payment history, work patterns and supporting evidence to reconstruct potential wage and employment-related financial shortfalls.
+              <span data-i18n="seafarers_intro">SMR reviews employment agreements, payment history, work patterns and supporting evidence to reconstruct potential wage and employment-related financial shortfalls.</span>
             </p>
           </div>
         </div>
 
         <div class="panel">
-          <h3>Evidence we may review</h3>
-          <p>Seafarer employment agreements, payslips, bank records, cash payment records, rosters, hours of work/rest records, vessel details, travel receipts, messages and other relevant evidence.</p>
-          <p>Every figure is classified as verified, calculated or disputed before being presented as part of a case.</p>
+          <h3><span data-i18n="evidence_heading"><span data-i18n="evidence_stage_title">Evidence</span> we may review</span></h3>
+          <p><span data-i18n="evidence_text1">Seafarer employment agreements, payslips, bank records, cash payment records, rosters, hours of work/rest records, vessel details, travel receipts, messages and other relevant evidence.</span></p>
+          <p><span data-i18n="evidence_text2">Every figure is classified as verified, calculated or disputed before being presented as part of a case.</span></p>
         </div>
       </div>
     </section>
@@ -720,17 +750,17 @@
     <section id="employers" class="content section-blue">
       <div class="container split">
         <div class="panel">
-          <h3>For Employers & Operators</h3>
-          <p>SMR's purpose is to identify and reconcile genuine financial discrepancies rather than inflate claims.</p>
-          <p>Employers should have an opportunity to provide relevant contracts, payroll records, rosters and other documents before unresolved items are escalated.</p>
+          <h3><span data-i18n="service_employers_title">For Employers</span> & Operators</h3>
+          <p><span data-i18n="employers_panel_text1">SMR's purpose is to identify and reconcile genuine financial discrepancies rather than inflate claims.</span></p>
+          <p><span data-i18n="employers_panel_text2">Employers should have an opportunity to provide relevant contracts, payroll records, rosters and other documents before unresolved items are escalated.</span></p>
         </div>
 
         <div>
-          <div class="eyebrow">Structured Resolution</div>
+          <div class="eyebrow"><span data-i18n="structured_resolution">Structured <span data-i18n="resolution_stage_title">Resolution</span></span></div>
           <div class="section-head">
-            <h2>Resolve historic wage exposure before it becomes a larger dispute.</h2>
+            <h2><span data-i18n="employers_heading">Resolve historic wage exposure before it becomes a larger dispute.</span></h2>
             <p>
-              Evidence-led reconciliation can provide a more efficient route for both workers and operators where legitimate historic liabilities exist.
+              <span data-i18n="employers_intro"><span data-i18n="evidence_stage_title">Evidence</span>-led reconciliation can provide a more efficient route for both workers and operators where legitimate historic liabilities exist.</span>
             </p>
           </div>
         </div>
@@ -740,36 +770,36 @@
     <section id="process" class="content section-light">
       <div class="container">
         <div class="section-head">
-          <div class="eyebrow">How It Works</div>
-          <h2>A five-stage claims process.</h2>
-          <p>Commercial, statutory and regulatory issues are separated so each matter follows the appropriate route.</p>
+          <div class="eyebrow"><span data-i18n="process_eyebrow">How It Works</span></div>
+          <h2><span data-i18n="process_heading">A five-stage claims process.</span></h2>
+          <p><span data-i18n="process_intro">Commercial, statutory and regulatory issues are separated so each matter follows the appropriate route.</span></p>
         </div>
 
         <div class="process">
           <div class="process-step">
-            <span>STAGE 01</span>
-            <h4>Intake</h4>
-            <p>Confidential worker or employer case information and consent.</p>
+            <span><span data-i18n="stage01">STAGE 01</span></span>
+            <h4><span data-i18n="intake_title">Intake</span></h4>
+            <p><span data-i18n="intake_text">Confidential worker or employer case information and consent.</span></p>
           </div>
           <div class="process-step">
-            <span>STAGE 02</span>
-            <h4>Evidence</h4>
-            <p>Contracts, payments, hours, expenses and vessel documentation.</p>
+            <span><span data-i18n="stage02">STAGE 02</span></span>
+            <h4><span data-i18n="evidence_stage_title">Evidence</span></h4>
+            <p><span data-i18n="evidence_stage_text">Contracts, payments, hours, expenses and vessel documentation.</span></p>
           </div>
           <div class="process-step">
-            <span>STAGE 03</span>
-            <h4>Audit</h4>
-            <p>Forensic reconstruction and itemised financial claim ledger.</p>
+            <span><span data-i18n="stage03">STAGE 03</span></span>
+            <h4><span data-i18n="audit_stage_title">Audit</span></h4>
+            <p><span data-i18n="audit_stage_text">Forensic reconstruction and itemised financial claim ledger.</span></p>
           </div>
           <div class="process-step">
-            <span>STAGE 04</span>
-            <h4>Resolution</h4>
-            <p>Structured commercial reconciliation where appropriate.</p>
+            <span><span data-i18n="stage04">STAGE 04</span></span>
+            <h4><span data-i18n="resolution_stage_title">Resolution</span></h4>
+            <p><span data-i18n="resolution_stage_text">Structured commercial reconciliation where appropriate.</span></p>
           </div>
           <div class="process-step">
-            <span>STAGE 05</span>
-            <h4>Escalation</h4>
-            <p>Independent legal or regulatory route where required.</p>
+            <span><span data-i18n="stage05">STAGE 05</span></span>
+            <h4><span data-i18n="escalation_stage_title">Escalation</span></h4>
+            <p><span data-i18n="escalation_stage_text">Independent legal or regulatory route where required.</span></p>
           </div>
         </div>
       </div>
@@ -778,20 +808,20 @@
     <section id="model" class="content section-blue">
       <div class="container split">
         <div>
-          <div class="eyebrow">Capital-Funded Recovery Model</div>
+          <div class="eyebrow"><span data-i18n="model_eyebrow">Capital-Funded Recovery Model</span></div>
           <div class="section-head">
-            <h2>Designed to remove the upfront cost barrier.</h2>
+            <h2><span data-i18n="model_heading">Designed to remove the upfront cost barrier.</span></h2>
             <p>
-              SMR Capital is being developed around privately funded case assessment and claims administration. Final remuneration structures remain subject to Irish legal and tax validation before operational deployment.
+              <span data-i18n="model_intro">SMR Capital is being developed around privately funded case assessment and claims administration. Final remuneration structures remain subject to Irish legal and tax validation before operational deployment.</span>
             </p>
           </div>
         </div>
 
         <div class="panel">
-          <h3>Three-Track Architecture</h3>
-          <p><strong style="color:white">Track A — Accrued Receivable</strong><br>Verified or calculable contractual money potentially due.</p>
-          <p><strong style="color:white">Track B — Statutory / Contentious Claim</strong><br>Issues requiring statutory processes, legal interpretation or adjudication.</p>
-          <p><strong style="color:white">Track C — Regulatory Matter</strong><br>Potential maritime or employment compliance matters recorded separately.</p>
+          <h3><span data-i18n="three_track_heading">Three-Track Architecture</span></h3>
+          <p><strong style="color:white"><span data-i18n="track_a_title">Track A — Accrued Receivable</span></strong><br><span data-i18n="track_a_text">Verified or calculable contractual money potentially due.</span></p>
+          <p><strong style="color:white"><span data-i18n="track_b_title">Track B — Statutory / Contentious Claim</span></strong><br><span data-i18n="track_b_text">Issues requiring statutory processes, legal interpretation or adjudication.</span></p>
+          <p><strong style="color:white"><span data-i18n="track_c_title">Track C — Regulatory Matter</span></strong><br><span data-i18n="track_c_text">Potential maritime or employment compliance matters recorded separately.</span></p>
         </div>
       </div>
     </section>
@@ -799,52 +829,52 @@
     <section class="content section-light">
       <div class="container">
         <div class="section-head">
-          <div class="eyebrow">Indicative Tool</div>
-          <h2>Wage Shortfall Estimator</h2>
-          <p>This gives a preliminary arithmetic estimate only and does not establish legal entitlement.</p>
+          <div class="eyebrow"><span data-i18n="estimator_eyebrow">Indicative Tool</span></div>
+          <h2><span data-i18n="estimator_heading">Wage Shortfall Estimator</span></h2>
+          <p><span data-i18n="estimator_intro">This gives a preliminary arithmetic estimate only and does not establish legal entitlement.</span></p>
         </div>
 
         <div class="estimator">
           <div class="form-grid">
             <div>
-              <label for="days">Days worked</label>
+              <label for="days"><span data-i18n="days_label">Days worked</span></label>
               <input id="days" type="number" value="300" min="0">
             </div>
             <div>
-              <label for="hours">Average hours per day</label>
+              <label for="hours"><span data-i18n="hours_label">Average hours per day</span></label>
               <input id="hours" type="number" value="12" min="0" step="0.5">
             </div>
             <div>
-              <label for="paid">Average amount paid per day (€)</label>
+              <label for="paid"><span data-i18n="paid_label">Average amount paid per day (€)</span></label>
               <input id="paid" type="number" value="120" min="0" step="0.01">
             </div>
             <div>
-              <label for="benchmark">Indicative benchmark hourly rate (€)</label>
+              <label for="benchmark"><span data-i18n="benchmark_label">Indicative benchmark hourly rate (€)</span></label>
               <input id="benchmark" type="number" value="13.50" min="0" step="0.01">
             </div>
           </div>
 
           <div style="margin-top:16px">
-            <button class="btn btn-primary" type="button" onclick="calculateEstimate()">CALCULATE ESTIMATE</button>
+            <button class="btn btn-primary" type="button" onclick="calculateEstimate()"><span data-i18n="calculate_btn">CALCULATE ESTIMATE</span></button>
           </div>
 
           <div class="results">
             <div class="result">
-              <small>Indicative earned amount</small>
+              <small><span data-i18n="earned_label">Indicative earned amount</span></small>
               <strong id="earned">€0.00</strong>
             </div>
             <div class="result">
-              <small>Approx. amount paid</small>
+              <small><span data-i18n="received_label">Approx. amount paid</span></small>
               <strong id="received">€0.00</strong>
             </div>
             <div class="result">
-              <small>Indicative shortfall</small>
+              <small><span data-i18n="shortfall_label">Indicative shortfall</span></small>
               <strong id="shortfall">€0.00</strong>
             </div>
           </div>
 
           <div class="small-note">
-            This calculator is not legal advice. Applicable wage rates, overtime, Sunday/public holiday entitlements, deductions, governing law, maritime agreements and worker status may alter the result.
+            <span data-i18n="calculator_note">This calculator is not legal advice. Applicable wage rates, overtime, Sunday/public holiday entitlements, deductions, governing law, maritime agreements and worker status may alter the result.</span>
           </div>
         </div>
       </div>
@@ -853,26 +883,26 @@
     <section class="content section-blue">
       <div class="container">
         <div class="section-head">
-          <div class="eyebrow">Frequently Asked Questions</div>
-          <h2>Common questions.</h2>
+          <div class="eyebrow"><span data-i18n="faq_eyebrow">Frequently Asked Questions</span></div>
+          <h2><span data-i18n="faq_heading">Common questions.</span></h2>
         </div>
 
         <div class="faq">
           <details>
-            <summary>Is the initial review free?</summary>
-            <p>Yes. The intended model provides an initial confidential assessment without an upfront assessment charge.</p>
+            <summary><span data-i18n="faq1_q">Is the initial review free?</span></summary>
+            <p><span data-i18n="faq1_a">Yes. The intended model provides an initial confidential assessment without an upfront assessment charge.</span></p>
           </details>
           <details>
-            <summary>Does the estimator show exactly what a worker is owed?</summary>
-            <p>No. It is an indicative calculator. A proper case requires evidence and analysis of the applicable contractual and legal framework.</p>
+            <summary><span data-i18n="faq2_q">Does the estimator show exactly what a worker is owed?</span></summary>
+            <p><span data-i18n="faq2_a">No. It is an indicative calculator. A proper case requires evidence and analysis of the applicable contractual and legal framework.</span></p>
           </details>
           <details>
-            <summary>Can SMR bring every case to court itself?</summary>
-            <p>No such representation is made. The correct claimant, assignment position and procedure depend on the nature of the right involved. Formal legal proceedings are referred through appropriately qualified legal practitioners where required.</p>
+            <summary><span data-i18n="faq3_q">Can SMR bring every case to court itself?</span></summary>
+            <p><span data-i18n="faq3_a">No such representation is made. The correct claimant, assignment position and procedure depend on the nature of the right involved. Formal legal proceedings are referred through appropriately qualified legal practitioners where required.</span></p>
           </details>
           <details>
-            <summary>What evidence should be kept?</summary>
-            <p>Employment agreements, payslips, bank records, hours records, rosters, travel receipts, vessel information, messages and other evidence relevant to the employment arrangement.</p>
+            <summary><span data-i18n="faq4_q">What evidence should be kept?</span></summary>
+            <p><span data-i18n="faq4_a">Employment agreements, payslips, bank records, hours records, rosters, travel receipts, vessel information, messages and other evidence relevant to the employment arrangement.</span></p>
           </details>
         </div>
       </div>
@@ -883,8 +913,8 @@
         <div class="secure">
           <div class="secure-icon">🔐</div>
           <div>
-            <strong>Confidential • Secure • Professional</strong>
-            <p>Initial submissions are handled confidentially and should contain only information necessary for an initial review.</p>
+            <strong><span data-i18n="contact_secure_title">Confidential • Secure • Professional</span></strong>
+            <p><span data-i18n="contact_secure_text">Initial submissions are handled confidentially and should contain only information necessary for an initial review.</span></p>
           </div>
         </div>
 
@@ -899,15 +929,15 @@
     <section id="legal" class="content section-light">
       <div class="container">
         <div class="section-head">
-          <div class="eyebrow">Legal Notice</div>
-          <h2>Important information.</h2>
+          <div class="eyebrow"><span data-i18n="legal_eyebrow">Legal Notice</span></div>
+          <h2><span data-i18n="legal_heading">Important information.</span></h2>
         </div>
 
         <div class="legal">
-          <p>This website provides general information about the proposed services and operating model of SMR Capital and does not constitute legal, tax, employment, investment or financial advice.</p>
-          <p>SMR Capital is not presented as a firm of solicitors or barristers. Matters requiring regulated legal services, formal legal representation or contentious proceedings are to be referred to appropriately qualified independent legal practitioners.</p>
-          <p>References to wage recovery, receivables, claims or maritime compliance do not mean that every asserted entitlement is legally recoverable, assignable or enforceable by SMR. Each matter depends on the underlying evidence, contractual basis, applicable law and procedural route.</p>
-          <p>Website content, estimator outputs and preliminary assessments are indicative only and must not be relied upon as a definitive statement of liability or entitlement.</p>
+          <p><span data-i18n="legal_p1">This website provides general information about the proposed services and operating model of SMR Capital and does not constitute legal, tax, employment, investment or financial advice.</span></p>
+          <p><span data-i18n="legal_p2">SMR Capital is not presented as a firm of solicitors or barristers. Matters requiring regulated legal services, formal legal representation or contentious proceedings are to be referred to appropriately qualified independent legal practitioners.</span></p>
+          <p><span data-i18n="legal_p3">References to wage recovery, receivables, claims or maritime compliance do not mean that every asserted entitlement is legally recoverable, assignable or enforceable by SMR. Each matter depends on the underlying evidence, contractual basis, applicable law and procedural route.</span></p>
+          <p><span data-i18n="legal_p4">Website content, estimator outputs and preliminary assessments are indicative only and must not be relied upon as a definitive statement of liability or entitlement.</span></p>
         </div>
       </div>
     </section>
@@ -915,8 +945,8 @@
 
   <footer>
     <div class="container footer-grid">
-      <div>© <span id="year"></span> SMR Capital. All rights reserved.</div>
-      <div>Dublin, Ireland • Maritime Wage Recovery & Claims Administration</div>
+      <div>© <span id="year"></span> SMR Capital. <span data-i18n="rights_reserved">All rights reserved.</span></div>
+      <div><span data-i18n="footer_tagline">Dublin, Ireland • Maritime Wage Recovery & Claims Administration</span></div>
     </div>
   </footer>
 
@@ -952,6 +982,49 @@
       document.getElementById('earned').textContent = euro(earned);
       document.getElementById('received').textContent = euro(received);
       document.getElementById('shortfall').textContent = euro(shortfall);
+    }
+
+
+    const translations = {"en": {"nav_home": "HOME", "nav_seafarers": "FOR SEAFARERS", "nav_employers": "EMPLOYERS", "nav_process": "PROCESS", "nav_model": "RECOVERY MODEL", "nav_contact": "CONTACT", "hero_eyebrow": "Dublin • Ireland • Maritime Sector", "hero_title_html": "Maritime Wage <span>Recovery & Claims</span> Administration", "hero_lead": "Evidence-led recovery of unpaid maritime employment entitlements.", "hero_copy": "SMR Capital provides specialist forensic payroll auditing, maritime claims administration and commercial recovery support for seafarers and maritime stakeholders.", "btn_seafarers_html": "FOR SEAFARERS <span>→</span>", "btn_employers_html": "FOR EMPLOYERS <span>→</span>", "btn_submit_html": "SUBMIT CASE <span>→</span>", "assurance_title": "🛡 No upfront cost to seafarers", "assurance_text": "Assessment is free and confidential. You pay nothing to have your case reviewed.", "service_seafarers_title": "For Seafarers", "service_seafarers_text": "We review employment records, quantify unpaid entitlements and support structured recovery.", "service_employers_title": "For Employers", "service_employers_text": "Resolve historic wage liability exposure through structured and evidence-led commercial solutions.", "service_audit_title": "Forensic Audit", "service_audit_text": "We reconstruct payroll data, validate evidence and calculate potential financial shortfalls.", "service_resolution_title": "Commercial Resolution", "service_resolution_text": "We prioritise structured reconciliation before formal escalation where appropriate.", "service_legal_title": "Legal Escalation", "service_legal_text": "Cases may be escalated through independent legal practitioners where formal legal action is required.", "learn_more": "Learn More →", "seafarers_heading": "Understand what you may actually be owed.", "seafarers_intro": "SMR reviews employment agreements, payment history, work patterns and supporting evidence to reconstruct potential wage and employment-related financial shortfalls.", "evidence_heading": "Evidence we may review", "evidence_text1": "Seafarer employment agreements, payslips, bank records, cash payment records, rosters, hours of work/rest records, vessel details, travel receipts, messages and other relevant evidence.", "evidence_text2": "Every figure is classified as verified, calculated or disputed before being presented as part of a case.", "employers_panel_heading": "For Employers & Operators", "employers_panel_text1": "SMR's purpose is to identify and reconcile genuine financial discrepancies rather than inflate claims.", "employers_panel_text2": "Employers should have an opportunity to provide relevant contracts, payroll records, rosters and other documents before unresolved items are escalated.", "structured_resolution": "Structured Resolution", "employers_heading": "Resolve historic wage exposure before it becomes a larger dispute.", "employers_intro": "Evidence-led reconciliation can provide a more efficient route for both workers and operators where legitimate historic liabilities exist.", "process_eyebrow": "How It Works", "process_heading": "A five-stage claims process.", "process_intro": "Commercial, statutory and regulatory issues are separated so each matter follows the appropriate route.", "stage01": "STAGE 01", "stage02": "STAGE 02", "stage03": "STAGE 03", "stage04": "STAGE 04", "stage05": "STAGE 05", "intake_title": "Intake", "intake_text": "Confidential worker or employer case information and consent.", "evidence_stage_title": "Evidence", "evidence_stage_text": "Contracts, payments, hours, expenses and vessel documentation.", "audit_stage_title": "Audit", "audit_stage_text": "Forensic reconstruction and itemised financial claim ledger.", "resolution_stage_title": "Resolution", "resolution_stage_text": "Structured commercial reconciliation where appropriate.", "escalation_stage_title": "Escalation", "escalation_stage_text": "Independent legal or regulatory route where required.", "model_eyebrow": "Capital-Funded Recovery Model", "model_heading": "Designed to remove the upfront cost barrier.", "model_intro": "SMR Capital is being developed around privately funded case assessment and claims administration. Final remuneration structures remain subject to Irish legal and tax validation before operational deployment.", "three_track_heading": "Three-Track Architecture", "track_a_title": "Track A — Accrued Receivable", "track_a_text": "Verified or calculable contractual money potentially due.", "track_b_title": "Track B — Statutory / Contentious Claim", "track_b_text": "Issues requiring statutory processes, legal interpretation or adjudication.", "track_c_title": "Track C — Regulatory Matter", "track_c_text": "Potential maritime or employment compliance matters recorded separately.", "estimator_eyebrow": "Indicative Tool", "estimator_heading": "Wage Shortfall Estimator", "estimator_intro": "This gives a preliminary arithmetic estimate only and does not establish legal entitlement.", "days_label": "Days worked", "hours_label": "Average hours per day", "paid_label": "Average amount paid per day (€)", "benchmark_label": "Indicative benchmark hourly rate (€)", "calculate_btn": "CALCULATE ESTIMATE", "earned_label": "Indicative earned amount", "received_label": "Approx. amount paid", "shortfall_label": "Indicative shortfall", "calculator_note": "This calculator is not legal advice. Applicable wage rates, overtime, Sunday/public holiday entitlements, deductions, governing law, maritime agreements and worker status may alter the result.", "faq_eyebrow": "Frequently Asked Questions", "faq_heading": "Common questions.", "faq1_q": "Is the initial review free?", "faq1_a": "Yes. The intended model provides an initial confidential assessment without an upfront assessment charge.", "faq2_q": "Does the estimator show exactly what a worker is owed?", "faq2_a": "No. It is an indicative calculator. A proper case requires evidence and analysis of the applicable contractual and legal framework.", "faq3_q": "Can SMR bring every case to court itself?", "faq3_a": "No such representation is made. The correct claimant, assignment position and procedure depend on the nature of the right involved. Formal legal proceedings are referred through appropriately qualified legal practitioners where required.", "faq4_q": "What evidence should be kept?", "faq4_a": "Employment agreements, payslips, bank records, hours records, rosters, travel receipts, vessel information, messages and other evidence relevant to the employment arrangement.", "contact_secure_title": "Confidential • Secure • Professional", "contact_secure_text": "Initial submissions are handled confidentially and should contain only information necessary for an initial review.", "legal_eyebrow": "Legal Notice", "legal_heading": "Important information.", "legal_p1": "This website provides general information about the proposed services and operating model of SMR Capital and does not constitute legal, tax, employment, investment or financial advice.", "legal_p2": "SMR Capital is not presented as a firm of solicitors or barristers. Matters requiring regulated legal services, formal legal representation or contentious proceedings are to be referred to appropriately qualified independent legal practitioners.", "legal_p3": "References to wage recovery, receivables, claims or maritime compliance do not mean that every asserted entitlement is legally recoverable, assignable or enforceable by SMR. Each matter depends on the underlying evidence, contractual basis, applicable law and procedural route.", "legal_p4": "Website content, estimator outputs and preliminary assessments are indicative only and must not be relied upon as a definitive statement of liability or entitlement.", "rights_reserved": "All rights reserved.", "footer_tagline": "Dublin, Ireland • Maritime Wage Recovery & Claims Administration"}, "id": {"nav_home": "BERANDA", "nav_seafarers": "UNTUK PELAUT", "nav_employers": "PEMBERI KERJA", "nav_process": "PROSES", "nav_model": "MODEL PEMULIHAN", "nav_contact": "KONTAK", "hero_eyebrow": "Dublin • Irlandia • Sektor Maritim", "hero_title_html": "Pemulihan Upah Maritim & <span>Administrasi Klaim</span>", "hero_lead": "Pemulihan hak-hak ketenagakerjaan maritim yang belum dibayar berdasarkan bukti.", "hero_copy": "SMR Capital menyediakan audit penggajian forensik, administrasi klaim maritim, dan dukungan pemulihan komersial bagi pelaut dan pemangku kepentingan maritim.", "btn_seafarers_html": "UNTUK PELAUT <span>→</span>", "btn_employers_html": "UNTUK PEMBERI KERJA <span>→</span>", "btn_submit_html": "AJUKAN KASUS <span>→</span>", "assurance_title": "🛡 Tanpa biaya awal bagi pelaut", "assurance_text": "Penilaian awal gratis dan rahasia. Anda tidak membayar untuk peninjauan awal kasus Anda.", "service_seafarers_title": "Untuk Pelaut", "service_seafarers_text": "Kami meninjau catatan kerja, menghitung hak yang belum dibayar, dan mendukung pemulihan secara terstruktur.", "service_employers_title": "Untuk Pemberi Kerja", "service_employers_text": "Selesaikan potensi kewajiban upah historis melalui solusi komersial yang terstruktur dan berbasis bukti.", "service_audit_title": "Audit Forensik", "service_audit_text": "Kami merekonstruksi data penggajian, memverifikasi bukti, dan menghitung kemungkinan kekurangan pembayaran.", "service_resolution_title": "Penyelesaian Komersial", "service_resolution_text": "Kami memprioritaskan rekonsiliasi terstruktur sebelum eskalasi formal jika sesuai.", "service_legal_title": "Eskalasi Hukum", "service_legal_text": "Kasus dapat dieskalasikan melalui praktisi hukum independen bila tindakan hukum formal diperlukan.", "learn_more": "Pelajari Lebih Lanjut →", "seafarers_heading": "Pahami apa yang mungkin sebenarnya menjadi hak Anda.", "seafarers_intro": "SMR meninjau perjanjian kerja, riwayat pembayaran, pola kerja, dan bukti pendukung untuk merekonstruksi kemungkinan kekurangan pembayaran.", "evidence_heading": "Bukti yang dapat kami tinjau", "evidence_text1": "Perjanjian kerja pelaut, slip gaji, catatan bank, catatan pembayaran tunai, jadwal kerja, catatan jam kerja/istirahat, detail kapal, tanda terima perjalanan, pesan, dan bukti relevan lainnya.", "evidence_text2": "Setiap angka diklasifikasikan sebagai terverifikasi, terhitung, atau disengketakan sebelum dimasukkan ke dalam suatu kasus.", "employers_panel_heading": "Untuk Pemberi Kerja & Operator", "employers_panel_text1": "Tujuan SMR adalah mengidentifikasi dan merekonsiliasi selisih keuangan yang nyata, bukan membesar-besarkan klaim.", "employers_panel_text2": "Pemberi kerja harus memiliki kesempatan untuk memberikan kontrak, catatan penggajian, jadwal, dan dokumen relevan lainnya sebelum masalah yang belum terselesaikan dieskalasikan.", "structured_resolution": "Penyelesaian Terstruktur", "employers_heading": "Selesaikan paparan kewajiban upah historis sebelum menjadi sengketa yang lebih besar.", "employers_intro": "Rekonsiliasi berbasis bukti dapat memberikan jalur yang lebih efisien bagi pekerja dan operator ketika kewajiban historis yang sah memang ada.", "process_eyebrow": "Cara Kerja", "process_heading": "Proses klaim lima tahap.", "process_intro": "Masalah komersial, hukum ketenagakerjaan, dan regulasi dipisahkan agar masing-masing mengikuti jalur yang tepat.", "stage01": "TAHAP 01", "stage02": "TAHAP 02", "stage03": "TAHAP 03", "stage04": "TAHAP 04", "stage05": "TAHAP 05", "intake_title": "Penerimaan", "intake_text": "Informasi kasus dan persetujuan pekerja atau pemberi kerja secara rahasia.", "evidence_stage_title": "Bukti", "evidence_stage_text": "Kontrak, pembayaran, jam kerja, biaya, dan dokumentasi kapal.", "audit_stage_title": "Audit", "audit_stage_text": "Rekonstruksi forensik dan buku besar klaim keuangan terperinci.", "resolution_stage_title": "Penyelesaian", "resolution_stage_text": "Rekonsiliasi komersial terstruktur bila sesuai.", "escalation_stage_title": "Eskalasi", "escalation_stage_text": "Jalur hukum atau regulasi independen bila diperlukan.", "model_eyebrow": "Model Pemulihan Berbasis Modal", "model_heading": "Dirancang untuk menghilangkan hambatan biaya awal.", "model_intro": "SMR Capital sedang dikembangkan dengan penilaian kasus dan administrasi klaim yang didanai secara privat. Struktur imbalan akhir tetap bergantung pada validasi hukum dan pajak di Irlandia sebelum digunakan secara operasional.", "three_track_heading": "Arsitektur Tiga Jalur", "track_a_title": "Jalur A — Piutang yang Telah Timbul", "track_a_text": "Uang kontraktual yang terverifikasi atau dapat dihitung dan mungkin terutang.", "track_b_title": "Jalur B — Klaim Hukum / Sengketa", "track_b_text": "Masalah yang memerlukan proses hukum, interpretasi hukum, atau adjudikasi.", "track_c_title": "Jalur C — Masalah Regulasi", "track_c_text": "Kemungkinan masalah kepatuhan maritim atau ketenagakerjaan yang dicatat secara terpisah.", "estimator_eyebrow": "Alat Perkiraan", "estimator_heading": "Kalkulator Kekurangan Upah", "estimator_intro": "Alat ini hanya memberikan perkiraan aritmetika awal dan tidak menetapkan hak hukum.", "days_label": "Hari bekerja", "hours_label": "Rata-rata jam per hari", "paid_label": "Rata-rata pembayaran aktual per hari (€)", "benchmark_label": "Tarif acuan indikatif per jam (€)", "calculate_btn": "HITUNG PERKIRAAN", "earned_label": "Perkiraan jumlah yang diperoleh", "received_label": "Perkiraan jumlah yang dibayar", "shortfall_label": "Perkiraan kekurangan", "calculator_note": "Kalkulator ini bukan nasihat hukum. Tarif upah yang berlaku, lembur, hak hari Minggu/libur, potongan, hukum yang berlaku, perjanjian maritim, dan status pekerja dapat mengubah hasil.", "faq_eyebrow": "Pertanyaan Umum", "faq_heading": "Pertanyaan yang sering diajukan.", "faq1_q": "Apakah peninjauan awal gratis?", "faq1_a": "Ya. Model yang direncanakan menyediakan penilaian awal yang rahasia tanpa biaya di muka.", "faq2_q": "Apakah kalkulator menunjukkan jumlah pasti yang terutang?", "faq2_a": "Tidak. Ini hanya kalkulator indikatif. Kasus nyata memerlukan bukti dan analisis kerangka kontraktual dan hukum yang berlaku.", "faq3_q": "Apakah SMR dapat membawa setiap kasus ke pengadilan sendiri?", "faq3_a": "Tidak. Pihak yang tepat, posisi pengalihan, dan prosedur bergantung pada sifat hak yang terlibat. Proses hukum formal dirujuk melalui praktisi hukum yang berkualifikasi bila diperlukan.", "faq4_q": "Bukti apa yang harus disimpan?", "faq4_a": "Perjanjian kerja, slip gaji, catatan bank, catatan jam kerja, jadwal, tanda terima perjalanan, informasi kapal, pesan, dan bukti lain yang relevan.", "contact_secure_title": "Rahasia • Aman • Profesional", "contact_secure_text": "Pengajuan awal ditangani secara rahasia dan hanya boleh memuat informasi yang diperlukan untuk peninjauan awal.", "legal_eyebrow": "Pemberitahuan Hukum", "legal_heading": "Informasi penting.", "legal_p1": "Situs ini memberikan informasi umum tentang layanan dan model operasional yang direncanakan oleh SMR Capital dan bukan merupakan nasihat hukum, pajak, ketenagakerjaan, investasi, atau keuangan.", "legal_p2": "SMR Capital tidak ditampilkan sebagai firma pengacara atau barrister. Masalah yang memerlukan layanan hukum teregulasi, representasi formal, atau proses sengketa akan dirujuk kepada praktisi hukum independen yang berkualifikasi.", "legal_p3": "Referensi terhadap pemulihan upah, piutang, klaim, atau kepatuhan maritim tidak berarti setiap hak yang dinyatakan dapat dipulihkan, dialihkan, atau ditegakkan oleh SMR. Setiap perkara bergantung pada bukti, dasar kontrak, hukum yang berlaku, dan jalur prosedural.", "legal_p4": "Konten situs, hasil kalkulator, dan penilaian awal hanya bersifat indikatif dan tidak boleh dianggap sebagai pernyataan pasti mengenai tanggung jawab atau hak.", "rights_reserved": "Hak cipta dilindungi.", "footer_tagline": "Dublin, Irlandia • Pemulihan Upah Maritim & Administrasi Klaim"}, "tl": {"nav_home": "HOME", "nav_seafarers": "PARA MARINO", "nav_employers": "MGA EMPLOYER", "nav_process": "PROSESO", "nav_model": "MODELO NG RECOVERY", "nav_contact": "CONTACT", "hero_eyebrow": "Dublin • Ireland • Maritime Sector", "hero_title_html": "Maritime Wage <span>Recovery & Claims</span> Administration", "hero_lead": "Evidence-led recovery ng hindi nabayarang maritime employment entitlements.", "hero_copy": "Nagbibigay ang SMR Capital ng forensic payroll auditing, maritime claims administration at commercial recovery support para sa mga marino at maritime stakeholders.", "btn_seafarers_html": "PARA SA MARINO <span>→</span>", "btn_employers_html": "PARA SA EMPLOYER <span>→</span>", "btn_submit_html": "ISUMITE ANG KASO <span>→</span>", "assurance_title": "🛡 Walang upfront cost para sa marino", "assurance_text": "Libre at kumpidensyal ang paunang assessment. Walang bayad para masuri ang inyong kaso.", "service_seafarers_title": "Para sa mga Marino", "service_seafarers_text": "Sinusuri namin ang employment records, tinatantiya ang hindi nabayarang benepisyo at sinusuportahan ang structured recovery.", "service_employers_title": "Para sa Employers", "service_employers_text": "Ayusin ang historical wage exposure sa pamamagitan ng structured at evidence-led commercial solutions.", "service_audit_title": "Forensic Audit", "service_audit_text": "Muling binubuo ang payroll data, sinusuri ang ebidensya at kinakalkula ang posibleng kakulangan sa bayad.", "service_resolution_title": "Commercial Resolution", "service_resolution_text": "Priyoridad ang structured reconciliation bago ang formal escalation kung naaangkop.", "service_legal_title": "Legal Escalation", "service_legal_text": "Maaaring i-escalate ang kaso sa independent legal practitioners kung kailangan ang pormal na legal action.", "learn_more": "Alamin Pa →", "seafarers_heading": "Alamin kung ano ang maaaring tunay na dapat bayaran sa iyo.", "seafarers_intro": "Sinusuri ng SMR ang employment agreements, payment history, work patterns at supporting evidence upang matukoy ang posibleng wage shortfalls.", "evidence_heading": "Mga ebidensyang maaari naming suriin", "evidence_text1": "Seafarer employment agreements, payslips, bank records, cash payment records, rosters, work/rest records, vessel details, travel receipts, messages at iba pang relevant evidence.", "evidence_text2": "Bawat halaga ay inuuri bilang verified, calculated o disputed bago isama sa kaso.", "employers_panel_heading": "Para sa Employers & Operators", "employers_panel_text1": "Layunin ng SMR na tukuyin at ayusin ang tunay na financial discrepancies, hindi palakihin ang claims.", "employers_panel_text2": "Dapat magkaroon ng pagkakataon ang employer na magbigay ng contracts, payroll records, rosters at iba pang relevant documents bago ang escalation.", "structured_resolution": "Structured Resolution", "employers_heading": "Ayusin ang historical wage exposure bago ito lumaki bilang dispute.", "employers_intro": "Ang evidence-led reconciliation ay maaaring maging mas episyenteng daan para sa workers at operators kapag may lehitimong historical liabilities.", "process_eyebrow": "Paano Ito Gumagana", "process_heading": "Limang yugto ng claims process.", "process_intro": "Pinaghihiwalay ang commercial, statutory at regulatory issues upang masundan ang tamang proseso.", "stage01": "YUGTO 01", "stage02": "YUGTO 02", "stage03": "YUGTO 03", "stage04": "YUGTO 04", "stage05": "YUGTO 05", "intake_title": "Intake", "intake_text": "Kumpidensyal na case information at consent.", "evidence_stage_title": "Evidence", "evidence_stage_text": "Contracts, payments, hours, expenses at vessel documents.", "audit_stage_title": "Audit", "audit_stage_text": "Forensic reconstruction at itemised financial claim ledger.", "resolution_stage_title": "Resolution", "resolution_stage_text": "Structured commercial reconciliation kung naaangkop.", "escalation_stage_title": "Escalation", "escalation_stage_text": "Independent legal o regulatory route kung kinakailangan.", "model_eyebrow": "Capital-Funded Recovery Model", "model_heading": "Dinisenyo upang alisin ang upfront cost barrier.", "model_intro": "Ang SMR Capital ay dine-develop gamit ang privately funded case assessment at claims administration. Ang final remuneration structures ay sasailalim sa Irish legal at tax validation bago gamitin.", "three_track_heading": "Three-Track Architecture", "track_a_title": "Track A — Accrued Receivable", "track_a_text": "Verified o calculable contractual money na maaaring due.", "track_b_title": "Track B — Statutory / Contentious Claim", "track_b_text": "Mga issue na nangangailangan ng statutory process, legal interpretation o adjudication.", "track_c_title": "Track C — Regulatory Matter", "track_c_text": "Posibleng maritime o employment compliance matters na hiwalay na itinatala.", "estimator_eyebrow": "Indicative Tool", "estimator_heading": "Wage Shortfall Estimator", "estimator_intro": "Paunang arithmetic estimate lamang ito at hindi legal entitlement.", "days_label": "Mga araw na nagtrabaho", "hours_label": "Average na oras kada araw", "paid_label": "Average na aktwal na bayad kada araw (€)", "benchmark_label": "Indicative benchmark hourly rate (€)", "calculate_btn": "KALKULAHIN", "earned_label": "Indicative earned amount", "received_label": "Approx. amount paid", "shortfall_label": "Indicative shortfall", "calculator_note": "Hindi legal advice ang calculator na ito. Maaaring baguhin ng wage rates, overtime, Sunday/public holiday entitlements, deductions, governing law, maritime agreements at worker status ang resulta.", "faq_eyebrow": "Frequently Asked Questions", "faq_heading": "Mga karaniwang tanong.", "faq1_q": "Libre ba ang initial review?", "faq1_a": "Oo. Ang intended model ay nagbibigay ng confidential initial assessment nang walang upfront assessment fee.", "faq2_q": "Eksakto ba ang amount na ipinapakita ng estimator?", "faq2_a": "Hindi. Indicative calculator lamang ito. Kailangan ng ebidensya at legal/contractual analysis ang totoong kaso.", "faq3_q": "Maaari bang dalhin ng SMR ang bawat kaso sa korte mismo?", "faq3_a": "Hindi. Depende ito sa nature ng right, assignment position at procedure. Ang formal proceedings ay dinadaan sa qualified legal practitioners kung kinakailangan.", "faq4_q": "Anong ebidensya ang dapat itago?", "faq4_a": "Employment agreements, payslips, bank records, hours records, rosters, travel receipts, vessel information, messages at iba pang relevant evidence.", "contact_secure_title": "Confidential • Secure • Professional", "contact_secure_text": "Ang initial submissions ay confidential at dapat lamang maglaman ng impormasyong kailangan para sa paunang review.", "legal_eyebrow": "Legal Notice", "legal_heading": "Mahalagang impormasyon.", "legal_p1": "Ang website na ito ay nagbibigay ng general information tungkol sa proposed services at operating model ng SMR Capital at hindi legal, tax, employment, investment o financial advice.", "legal_p2": "Ang SMR Capital ay hindi ipinapakita bilang law firm. Ang matters na nangangailangan ng regulated legal services o formal proceedings ay nire-refer sa qualified independent legal practitioners.", "legal_p3": "Ang references sa wage recovery, receivables, claims o maritime compliance ay hindi nangangahulugang lahat ng asserted entitlement ay recoverable, assignable o enforceable ng SMR.", "legal_p4": "Ang website content, estimator outputs at preliminary assessments ay indicative lamang at hindi definitive statement ng liability o entitlement.", "rights_reserved": "All rights reserved.", "footer_tagline": "Dublin, Ireland • Maritime Wage Recovery & Claims Administration"}, "pl": {"nav_home": "STRONA GŁÓWNA", "nav_seafarers": "DLA MARYNARZY", "nav_employers": "PRACODAWCY", "nav_process": "PROCES", "nav_model": "MODEL ODZYSKU", "nav_contact": "KONTAKT", "hero_eyebrow": "Dublin • Irlandia • Sektor morski", "hero_title_html": "Odzyskiwanie Wynagrodzeń Morskich i <span>Obsługa Roszczeń</span>", "hero_lead": "Odzyskiwanie niezapłaconych należności pracowniczych w sektorze morskim w oparciu o dowody.", "hero_copy": "SMR Capital zapewnia specjalistyczne audyty płacowe, administrację roszczeń morskich i wsparcie w odzyskiwaniu należności.", "btn_seafarers_html": "DLA MARYNARZY <span>→</span>", "btn_employers_html": "DLA PRACODAWCÓW <span>→</span>", "btn_submit_html": "ZGŁOŚ SPRAWĘ <span>→</span>", "assurance_title": "🛡 Bez kosztów wstępnych dla marynarzy", "assurance_text": "Wstępna ocena jest bezpłatna i poufna.", "service_seafarers_title": "Dla Marynarzy", "service_seafarers_text": "Analizujemy dokumentację zatrudnienia, obliczamy niezapłacone należności i wspieramy uporządkowane odzyskiwanie.", "service_employers_title": "Dla Pracodawców", "service_employers_text": "Pomagamy rozwiązywać historyczne zobowiązania płacowe poprzez uporządkowane rozwiązania oparte na dowodach.", "service_audit_title": "Audyt Forensyczny", "service_audit_text": "Odtwarzamy dane płacowe, weryfikujemy dowody i obliczamy potencjalne niedopłaty.", "service_resolution_title": "Rozwiązanie Komercyjne", "service_resolution_text": "Priorytetem jest uporządkowane uzgodnienie przed formalną eskalacją.", "service_legal_title": "Eskalacja Prawna", "service_legal_text": "Sprawy mogą być przekazane niezależnym prawnikom, gdy wymagane jest formalne postępowanie.", "learn_more": "Dowiedz się więcej →", "seafarers_heading": "Dowiedz się, ile może Ci się rzeczywiście należeć.", "seafarers_intro": "SMR analizuje umowy, historię płatności, czas pracy i dowody w celu odtworzenia możliwych niedopłat.", "evidence_heading": "Dowody, które możemy przeanalizować", "evidence_text1": "Umowy marynarskie, paski płacowe, wyciągi bankowe, płatności gotówkowe, grafiki, ewidencja pracy/odpoczynku, dane statku, rachunki podróżne, wiadomości i inne dowody.", "evidence_text2": "Każda kwota jest klasyfikowana jako zweryfikowana, obliczona lub sporna.", "employers_panel_heading": "Dla Pracodawców i Operatorów", "employers_panel_text1": "Celem SMR jest ustalanie rzeczywistych rozbieżności finansowych, a nie zawyżanie roszczeń.", "employers_panel_text2": "Pracodawca powinien mieć możliwość przedstawienia umów, list płac, grafików i innych dokumentów przed eskalacją.", "structured_resolution": "Uporządkowane Rozwiązanie", "employers_heading": "Rozwiąż historyczne zobowiązania płacowe, zanim przerodzą się w większy spór.", "employers_intro": "Uzgodnienie oparte na dowodach może być sprawniejszym rozwiązaniem dla obu stron.", "process_eyebrow": "Jak To Działa", "process_heading": "Pięcioetapowy proces roszczeń.", "process_intro": "Kwestie komercyjne, ustawowe i regulacyjne są rozdzielane, aby każda sprawa trafiła właściwą drogą.", "stage01": "ETAP 01", "stage02": "ETAP 02", "stage03": "ETAP 03", "stage04": "ETAP 04", "stage05": "ETAP 05", "intake_title": "Przyjęcie", "intake_text": "Poufne informacje o sprawie i zgoda.", "evidence_stage_title": "Dowody", "evidence_stage_text": "Umowy, płatności, godziny, wydatki i dokumentacja statku.", "audit_stage_title": "Audyt", "audit_stage_text": "Forensyczne odtworzenie i szczegółowy rejestr roszczenia.", "resolution_stage_title": "Rozwiązanie", "resolution_stage_text": "Uporządkowane uzgodnienie komercyjne.", "escalation_stage_title": "Eskalacja", "escalation_stage_text": "Niezależna droga prawna lub regulacyjna, jeśli potrzebna.", "model_eyebrow": "Model Finansowany Kapitałem", "model_heading": "Zaprojektowany, aby usunąć barierę kosztów początkowych.", "model_intro": "SMR Capital jest rozwijany jako prywatnie finansowany model oceny i administracji roszczeń. Ostateczne zasady wynagrodzenia wymagają weryfikacji prawnej i podatkowej w Irlandii.", "three_track_heading": "Model Trzech Ścieżek", "track_a_title": "Ścieżka A — Należność", "track_a_text": "Zweryfikowane lub obliczalne zobowiązanie umowne.", "track_b_title": "Ścieżka B — Roszczenie Ustawowe / Sporne", "track_b_text": "Kwestie wymagające procedur ustawowych, interpretacji prawnej lub orzeczenia.", "track_c_title": "Ścieżka C — Kwestia Regulacyjna", "track_c_text": "Potencjalne kwestie zgodności morskiej lub pracowniczej.", "estimator_eyebrow": "Narzędzie Orientacyjne", "estimator_heading": "Kalkulator Niedopłaty Wynagrodzenia", "estimator_intro": "Narzędzie podaje jedynie orientacyjne wyliczenie i nie stanowi ustalenia prawnego.", "days_label": "Dni pracy", "hours_label": "Średnia liczba godzin dziennie", "paid_label": "Średnia faktycznie wypłacona kwota dziennie (€)", "benchmark_label": "Orientacyjna stawka godzinowa (€)", "calculate_btn": "OBLICZ", "earned_label": "Orientacyjne wynagrodzenie należne", "received_label": "Przybliżona kwota wypłacona", "shortfall_label": "Orientacyjna niedopłata", "calculator_note": "Kalkulator nie stanowi porady prawnej. Stawki, nadgodziny, niedziele/święta, potrącenia, prawo właściwe i status pracownika mogą zmienić wynik.", "faq_eyebrow": "Najczęstsze Pytania", "faq_heading": "Najczęstsze pytania.", "faq1_q": "Czy wstępna analiza jest bezpłatna?", "faq1_a": "Tak. Wstępna poufna ocena jest bezpłatna.", "faq2_q": "Czy kalkulator pokazuje dokładną należność?", "faq2_a": "Nie. To narzędzie orientacyjne. Rzeczywista sprawa wymaga dowodów i analizy prawnej.", "faq3_q": "Czy SMR może samodzielnie skierować każdą sprawę do sądu?", "faq3_a": "Nie. Zależy to od charakteru prawa i właściwej procedury. Formalne postępowania są kierowane do wykwalifikowanych prawników.", "faq4_q": "Jakie dowody należy zachować?", "faq4_a": "Umowy, paski płacowe, wyciągi bankowe, ewidencję godzin, grafiki, rachunki podróżne, informacje o statku i wiadomości.", "contact_secure_title": "Poufnie • Bezpiecznie • Profesjonalnie", "contact_secure_text": "Pierwsze zgłoszenie jest traktowane poufnie i powinno zawierać tylko informacje potrzebne do wstępnej analizy.", "legal_eyebrow": "Informacja Prawna", "legal_heading": "Ważne informacje.", "legal_p1": "Strona zawiera ogólne informacje i nie stanowi porady prawnej, podatkowej, pracowniczej, inwestycyjnej ani finansowej.", "legal_p2": "SMR Capital nie jest przedstawiany jako kancelaria prawna. Sprawy wymagające regulowanych usług prawnych są kierowane do niezależnych prawników.", "legal_p3": "Wzmianki o odzyskiwaniu wynagrodzeń lub roszczeniach nie oznaczają, że każda należność jest możliwa do wyegzekwowania przez SMR.", "legal_p4": "Treści strony i wyniki kalkulatora mają charakter orientacyjny.", "rights_reserved": "Wszelkie prawa zastrzeżone.", "footer_tagline": "Dublin, Irlandia • Odzyskiwanie Wynagrodzeń Morskich i Obsługa Roszczeń"}, "ro": {"nav_home": "ACASĂ", "nav_seafarers": "PENTRU MARINARI", "nav_employers": "ANGAJATORI", "nav_process": "PROCES", "nav_model": "MODEL DE RECUPERARE", "nav_contact": "CONTACT", "hero_eyebrow": "Dublin • Irlanda • Sector maritim", "hero_title_html": "Maritime Wage <span>Recovery & Claims</span> Administration", "hero_lead": "Recuperarea pe bază de dovezi a drepturilor salariale maritime neachitate.", "hero_copy": "SMR Capital provides specialist forensic payroll auditing, maritime claims administration and commercial recovery support for seafarers and maritime stakeholders.", "btn_seafarers_html": "PENTRU MARINARI <span>→</span>", "btn_employers_html": "PENTRU ANGAJATORI <span>→</span>", "btn_submit_html": "TRIMITE CAZUL <span>→</span>", "assurance_title": "🛡 No upfront cost to seafarers", "assurance_text": "Assessment is free and confidential. You pay nothing to have your case reviewed.", "service_seafarers_title": "For Seafarers", "service_seafarers_text": "We review employment records, quantify unpaid entitlements and support structured recovery.", "service_employers_title": "For Employers", "service_employers_text": "Resolve historic wage liability exposure through structured and evidence-led commercial solutions.", "service_audit_title": "Forensic Audit", "service_audit_text": "We reconstruct payroll data, validate evidence and calculate potential financial shortfalls.", "service_resolution_title": "Commercial Resolution", "service_resolution_text": "We prioritise structured reconciliation before formal escalation where appropriate.", "service_legal_title": "Legal Escalation", "service_legal_text": "Cases may be escalated through independent legal practitioners where formal legal action is required.", "learn_more": "Learn More →", "seafarers_heading": "Understand what you may actually be owed.", "seafarers_intro": "SMR reviews employment agreements, payment history, work patterns and supporting evidence to reconstruct potential wage and employment-related financial shortfalls.", "evidence_heading": "Evidence we may review", "evidence_text1": "Seafarer employment agreements, payslips, bank records, cash payment records, rosters, hours of work/rest records, vessel details, travel receipts, messages and other relevant evidence.", "evidence_text2": "Every figure is classified as verified, calculated or disputed before being presented as part of a case.", "employers_panel_heading": "For Employers & Operators", "employers_panel_text1": "SMR's purpose is to identify and reconcile genuine financial discrepancies rather than inflate claims.", "employers_panel_text2": "Employers should have an opportunity to provide relevant contracts, payroll records, rosters and other documents before unresolved items are escalated.", "structured_resolution": "Structured Resolution", "employers_heading": "Resolve historic wage exposure before it becomes a larger dispute.", "employers_intro": "Evidence-led reconciliation can provide a more efficient route for both workers and operators where legitimate historic liabilities exist.", "process_eyebrow": "How It Works", "process_heading": "A five-stage claims process.", "process_intro": "Commercial, statutory and regulatory issues are separated so each matter follows the appropriate route.", "stage01": "STAGE 01", "stage02": "STAGE 02", "stage03": "STAGE 03", "stage04": "STAGE 04", "stage05": "STAGE 05", "intake_title": "Intake", "intake_text": "Confidential worker or employer case information and consent.", "evidence_stage_title": "Evidence", "evidence_stage_text": "Contracts, payments, hours, expenses and vessel documentation.", "audit_stage_title": "Audit", "audit_stage_text": "Forensic reconstruction and itemised financial claim ledger.", "resolution_stage_title": "Resolution", "resolution_stage_text": "Structured commercial reconciliation where appropriate.", "escalation_stage_title": "Escalation", "escalation_stage_text": "Independent legal or regulatory route where required.", "model_eyebrow": "Capital-Funded Recovery Model", "model_heading": "Designed to remove the upfront cost barrier.", "model_intro": "SMR Capital is being developed around privately funded case assessment and claims administration. Final remuneration structures remain subject to Irish legal and tax validation before operational deployment.", "three_track_heading": "Three-Track Architecture", "track_a_title": "Track A — Accrued Receivable", "track_a_text": "Verified or calculable contractual money potentially due.", "track_b_title": "Track B — Statutory / Contentious Claim", "track_b_text": "Issues requiring statutory processes, legal interpretation or adjudication.", "track_c_title": "Track C — Regulatory Matter", "track_c_text": "Potential maritime or employment compliance matters recorded separately.", "estimator_eyebrow": "Indicative Tool", "estimator_heading": "Wage Shortfall Estimator", "estimator_intro": "This gives a preliminary arithmetic estimate only and does not establish legal entitlement.", "days_label": "Days worked", "hours_label": "Average hours per day", "paid_label": "Average amount paid per day (€)", "benchmark_label": "Indicative benchmark hourly rate (€)", "calculate_btn": "CALCULATE ESTIMATE", "earned_label": "Indicative earned amount", "received_label": "Approx. amount paid", "shortfall_label": "Indicative shortfall", "calculator_note": "This calculator is not legal advice. Applicable wage rates, overtime, Sunday/public holiday entitlements, deductions, governing law, maritime agreements and worker status may alter the result.", "faq_eyebrow": "Frequently Asked Questions", "faq_heading": "Common questions.", "faq1_q": "Is the initial review free?", "faq1_a": "Yes. The intended model provides an initial confidential assessment without an upfront assessment charge.", "faq2_q": "Does the estimator show exactly what a worker is owed?", "faq2_a": "No. It is an indicative calculator. A proper case requires evidence and analysis of the applicable contractual and legal framework.", "faq3_q": "Can SMR bring every case to court itself?", "faq3_a": "No such representation is made. The correct claimant, assignment position and procedure depend on the nature of the right involved. Formal legal proceedings are referred through appropriately qualified legal practitioners where required.", "faq4_q": "What evidence should be kept?", "faq4_a": "Employment agreements, payslips, bank records, hours records, rosters, travel receipts, vessel information, messages and other evidence relevant to the employment arrangement.", "contact_secure_title": "Confidential • Secure • Professional", "contact_secure_text": "Initial submissions are handled confidentially and should contain only information necessary for an initial review.", "legal_eyebrow": "Legal Notice", "legal_heading": "Important information.", "legal_p1": "This website provides general information about the proposed services and operating model of SMR Capital and does not constitute legal, tax, employment, investment or financial advice.", "legal_p2": "SMR Capital is not presented as a firm of solicitors or barristers. Matters requiring regulated legal services, formal legal representation or contentious proceedings are to be referred to appropriately qualified independent legal practitioners.", "legal_p3": "References to wage recovery, receivables, claims or maritime compliance do not mean that every asserted entitlement is legally recoverable, assignable or enforceable by SMR. Each matter depends on the underlying evidence, contractual basis, applicable law and procedural route.", "legal_p4": "Website content, estimator outputs and preliminary assessments are indicative only and must not be relied upon as a definitive statement of liability or entitlement.", "rights_reserved": "All rights reserved.", "footer_tagline": "Dublin, Ireland • Maritime Wage Recovery & Claims Administration"}, "uk": {"nav_home": "ГОЛОВНА", "nav_seafarers": "ДЛЯ МОРЯКІВ", "nav_employers": "РОБОТОДАВЦІ", "nav_process": "ПРОЦЕС", "nav_model": "МОДЕЛЬ СТЯГНЕННЯ", "nav_contact": "КОНТАКТ", "hero_eyebrow": "Дублін • Ірландія • Морський сектор", "hero_title_html": "Maritime Wage <span>Recovery & Claims</span> Administration", "hero_lead": "Повернення невиплачених морських трудових виплат на основі доказів.", "hero_copy": "SMR Capital provides specialist forensic payroll auditing, maritime claims administration and commercial recovery support for seafarers and maritime stakeholders.", "btn_seafarers_html": "ДЛЯ МОРЯКІВ <span>→</span>", "btn_employers_html": "ДЛЯ РОБОТОДАВЦІВ <span>→</span>", "btn_submit_html": "ПОДАТИ СПРАВУ <span>→</span>", "assurance_title": "🛡 No upfront cost to seafarers", "assurance_text": "Assessment is free and confidential. You pay nothing to have your case reviewed.", "service_seafarers_title": "For Seafarers", "service_seafarers_text": "We review employment records, quantify unpaid entitlements and support structured recovery.", "service_employers_title": "For Employers", "service_employers_text": "Resolve historic wage liability exposure through structured and evidence-led commercial solutions.", "service_audit_title": "Forensic Audit", "service_audit_text": "We reconstruct payroll data, validate evidence and calculate potential financial shortfalls.", "service_resolution_title": "Commercial Resolution", "service_resolution_text": "We prioritise structured reconciliation before formal escalation where appropriate.", "service_legal_title": "Legal Escalation", "service_legal_text": "Cases may be escalated through independent legal practitioners where formal legal action is required.", "learn_more": "Learn More →", "seafarers_heading": "Understand what you may actually be owed.", "seafarers_intro": "SMR reviews employment agreements, payment history, work patterns and supporting evidence to reconstruct potential wage and employment-related financial shortfalls.", "evidence_heading": "Evidence we may review", "evidence_text1": "Seafarer employment agreements, payslips, bank records, cash payment records, rosters, hours of work/rest records, vessel details, travel receipts, messages and other relevant evidence.", "evidence_text2": "Every figure is classified as verified, calculated or disputed before being presented as part of a case.", "employers_panel_heading": "For Employers & Operators", "employers_panel_text1": "SMR's purpose is to identify and reconcile genuine financial discrepancies rather than inflate claims.", "employers_panel_text2": "Employers should have an opportunity to provide relevant contracts, payroll records, rosters and other documents before unresolved items are escalated.", "structured_resolution": "Structured Resolution", "employers_heading": "Resolve historic wage exposure before it becomes a larger dispute.", "employers_intro": "Evidence-led reconciliation can provide a more efficient route for both workers and operators where legitimate historic liabilities exist.", "process_eyebrow": "How It Works", "process_heading": "A five-stage claims process.", "process_intro": "Commercial, statutory and regulatory issues are separated so each matter follows the appropriate route.", "stage01": "STAGE 01", "stage02": "STAGE 02", "stage03": "STAGE 03", "stage04": "STAGE 04", "stage05": "STAGE 05", "intake_title": "Intake", "intake_text": "Confidential worker or employer case information and consent.", "evidence_stage_title": "Evidence", "evidence_stage_text": "Contracts, payments, hours, expenses and vessel documentation.", "audit_stage_title": "Audit", "audit_stage_text": "Forensic reconstruction and itemised financial claim ledger.", "resolution_stage_title": "Resolution", "resolution_stage_text": "Structured commercial reconciliation where appropriate.", "escalation_stage_title": "Escalation", "escalation_stage_text": "Independent legal or regulatory route where required.", "model_eyebrow": "Capital-Funded Recovery Model", "model_heading": "Designed to remove the upfront cost barrier.", "model_intro": "SMR Capital is being developed around privately funded case assessment and claims administration. Final remuneration structures remain subject to Irish legal and tax validation before operational deployment.", "three_track_heading": "Three-Track Architecture", "track_a_title": "Track A — Accrued Receivable", "track_a_text": "Verified or calculable contractual money potentially due.", "track_b_title": "Track B — Statutory / Contentious Claim", "track_b_text": "Issues requiring statutory processes, legal interpretation or adjudication.", "track_c_title": "Track C — Regulatory Matter", "track_c_text": "Potential maritime or employment compliance matters recorded separately.", "estimator_eyebrow": "Indicative Tool", "estimator_heading": "Wage Shortfall Estimator", "estimator_intro": "This gives a preliminary arithmetic estimate only and does not establish legal entitlement.", "days_label": "Days worked", "hours_label": "Average hours per day", "paid_label": "Average amount paid per day (€)", "benchmark_label": "Indicative benchmark hourly rate (€)", "calculate_btn": "CALCULATE ESTIMATE", "earned_label": "Indicative earned amount", "received_label": "Approx. amount paid", "shortfall_label": "Indicative shortfall", "calculator_note": "This calculator is not legal advice. Applicable wage rates, overtime, Sunday/public holiday entitlements, deductions, governing law, maritime agreements and worker status may alter the result.", "faq_eyebrow": "Frequently Asked Questions", "faq_heading": "Common questions.", "faq1_q": "Is the initial review free?", "faq1_a": "Yes. The intended model provides an initial confidential assessment without an upfront assessment charge.", "faq2_q": "Does the estimator show exactly what a worker is owed?", "faq2_a": "No. It is an indicative calculator. A proper case requires evidence and analysis of the applicable contractual and legal framework.", "faq3_q": "Can SMR bring every case to court itself?", "faq3_a": "No such representation is made. The correct claimant, assignment position and procedure depend on the nature of the right involved. Formal legal proceedings are referred through appropriately qualified legal practitioners where required.", "faq4_q": "What evidence should be kept?", "faq4_a": "Employment agreements, payslips, bank records, hours records, rosters, travel receipts, vessel information, messages and other evidence relevant to the employment arrangement.", "contact_secure_title": "Confidential • Secure • Professional", "contact_secure_text": "Initial submissions are handled confidentially and should contain only information necessary for an initial review.", "legal_eyebrow": "Legal Notice", "legal_heading": "Important information.", "legal_p1": "This website provides general information about the proposed services and operating model of SMR Capital and does not constitute legal, tax, employment, investment or financial advice.", "legal_p2": "SMR Capital is not presented as a firm of solicitors or barristers. Matters requiring regulated legal services, formal legal representation or contentious proceedings are to be referred to appropriately qualified independent legal practitioners.", "legal_p3": "References to wage recovery, receivables, claims or maritime compliance do not mean that every asserted entitlement is legally recoverable, assignable or enforceable by SMR. Each matter depends on the underlying evidence, contractual basis, applicable law and procedural route.", "legal_p4": "Website content, estimator outputs and preliminary assessments are indicative only and must not be relied upon as a definitive statement of liability or entitlement.", "rights_reserved": "All rights reserved.", "footer_tagline": "Dublin, Ireland • Maritime Wage Recovery & Claims Administration"}, "es": {"nav_home": "INICIO", "nav_seafarers": "PARA MARINOS", "nav_employers": "EMPLEADORES", "nav_process": "PROCESO", "nav_model": "MODELO DE RECUPERACIÓN", "nav_contact": "CONTACTO", "hero_eyebrow": "Dublín • Irlanda • Sector marítimo", "hero_title_html": "Maritime Wage <span>Recovery & Claims</span> Administration", "hero_lead": "Recuperación basada en pruebas de derechos laborales marítimos impagados.", "hero_copy": "SMR Capital provides specialist forensic payroll auditing, maritime claims administration and commercial recovery support for seafarers and maritime stakeholders.", "btn_seafarers_html": "PARA MARINOS <span>→</span>", "btn_employers_html": "PARA EMPLEADORES <span>→</span>", "btn_submit_html": "ENVIAR CASO <span>→</span>", "assurance_title": "🛡 No upfront cost to seafarers", "assurance_text": "Assessment is free and confidential. You pay nothing to have your case reviewed.", "service_seafarers_title": "For Seafarers", "service_seafarers_text": "We review employment records, quantify unpaid entitlements and support structured recovery.", "service_employers_title": "For Employers", "service_employers_text": "Resolve historic wage liability exposure through structured and evidence-led commercial solutions.", "service_audit_title": "Forensic Audit", "service_audit_text": "We reconstruct payroll data, validate evidence and calculate potential financial shortfalls.", "service_resolution_title": "Commercial Resolution", "service_resolution_text": "We prioritise structured reconciliation before formal escalation where appropriate.", "service_legal_title": "Legal Escalation", "service_legal_text": "Cases may be escalated through independent legal practitioners where formal legal action is required.", "learn_more": "Learn More →", "seafarers_heading": "Understand what you may actually be owed.", "seafarers_intro": "SMR reviews employment agreements, payment history, work patterns and supporting evidence to reconstruct potential wage and employment-related financial shortfalls.", "evidence_heading": "Evidence we may review", "evidence_text1": "Seafarer employment agreements, payslips, bank records, cash payment records, rosters, hours of work/rest records, vessel details, travel receipts, messages and other relevant evidence.", "evidence_text2": "Every figure is classified as verified, calculated or disputed before being presented as part of a case.", "employers_panel_heading": "For Employers & Operators", "employers_panel_text1": "SMR's purpose is to identify and reconcile genuine financial discrepancies rather than inflate claims.", "employers_panel_text2": "Employers should have an opportunity to provide relevant contracts, payroll records, rosters and other documents before unresolved items are escalated.", "structured_resolution": "Structured Resolution", "employers_heading": "Resolve historic wage exposure before it becomes a larger dispute.", "employers_intro": "Evidence-led reconciliation can provide a more efficient route for both workers and operators where legitimate historic liabilities exist.", "process_eyebrow": "How It Works", "process_heading": "A five-stage claims process.", "process_intro": "Commercial, statutory and regulatory issues are separated so each matter follows the appropriate route.", "stage01": "STAGE 01", "stage02": "STAGE 02", "stage03": "STAGE 03", "stage04": "STAGE 04", "stage05": "STAGE 05", "intake_title": "Intake", "intake_text": "Confidential worker or employer case information and consent.", "evidence_stage_title": "Evidence", "evidence_stage_text": "Contracts, payments, hours, expenses and vessel documentation.", "audit_stage_title": "Audit", "audit_stage_text": "Forensic reconstruction and itemised financial claim ledger.", "resolution_stage_title": "Resolution", "resolution_stage_text": "Structured commercial reconciliation where appropriate.", "escalation_stage_title": "Escalation", "escalation_stage_text": "Independent legal or regulatory route where required.", "model_eyebrow": "Capital-Funded Recovery Model", "model_heading": "Designed to remove the upfront cost barrier.", "model_intro": "SMR Capital is being developed around privately funded case assessment and claims administration. Final remuneration structures remain subject to Irish legal and tax validation before operational deployment.", "three_track_heading": "Three-Track Architecture", "track_a_title": "Track A — Accrued Receivable", "track_a_text": "Verified or calculable contractual money potentially due.", "track_b_title": "Track B — Statutory / Contentious Claim", "track_b_text": "Issues requiring statutory processes, legal interpretation or adjudication.", "track_c_title": "Track C — Regulatory Matter", "track_c_text": "Potential maritime or employment compliance matters recorded separately.", "estimator_eyebrow": "Indicative Tool", "estimator_heading": "Wage Shortfall Estimator", "estimator_intro": "This gives a preliminary arithmetic estimate only and does not establish legal entitlement.", "days_label": "Days worked", "hours_label": "Average hours per day", "paid_label": "Average amount paid per day (€)", "benchmark_label": "Indicative benchmark hourly rate (€)", "calculate_btn": "CALCULATE ESTIMATE", "earned_label": "Indicative earned amount", "received_label": "Approx. amount paid", "shortfall_label": "Indicative shortfall", "calculator_note": "This calculator is not legal advice. Applicable wage rates, overtime, Sunday/public holiday entitlements, deductions, governing law, maritime agreements and worker status may alter the result.", "faq_eyebrow": "Frequently Asked Questions", "faq_heading": "Common questions.", "faq1_q": "Is the initial review free?", "faq1_a": "Yes. The intended model provides an initial confidential assessment without an upfront assessment charge.", "faq2_q": "Does the estimator show exactly what a worker is owed?", "faq2_a": "No. It is an indicative calculator. A proper case requires evidence and analysis of the applicable contractual and legal framework.", "faq3_q": "Can SMR bring every case to court itself?", "faq3_a": "No such representation is made. The correct claimant, assignment position and procedure depend on the nature of the right involved. Formal legal proceedings are referred through appropriately qualified legal practitioners where required.", "faq4_q": "What evidence should be kept?", "faq4_a": "Employment agreements, payslips, bank records, hours records, rosters, travel receipts, vessel information, messages and other evidence relevant to the employment arrangement.", "contact_secure_title": "Confidential • Secure • Professional", "contact_secure_text": "Initial submissions are handled confidentially and should contain only information necessary for an initial review.", "legal_eyebrow": "Legal Notice", "legal_heading": "Important information.", "legal_p1": "This website provides general information about the proposed services and operating model of SMR Capital and does not constitute legal, tax, employment, investment or financial advice.", "legal_p2": "SMR Capital is not presented as a firm of solicitors or barristers. Matters requiring regulated legal services, formal legal representation or contentious proceedings are to be referred to appropriately qualified independent legal practitioners.", "legal_p3": "References to wage recovery, receivables, claims or maritime compliance do not mean that every asserted entitlement is legally recoverable, assignable or enforceable by SMR. Each matter depends on the underlying evidence, contractual basis, applicable law and procedural route.", "legal_p4": "Website content, estimator outputs and preliminary assessments are indicative only and must not be relied upon as a definitive statement of liability or entitlement.", "rights_reserved": "All rights reserved.", "footer_tagline": "Dublin, Ireland • Maritime Wage Recovery & Claims Administration"}, "pt": {"nav_home": "INÍCIO", "nav_seafarers": "PARA MARÍTIMOS", "nav_employers": "EMPREGADORES", "nav_process": "PROCESSO", "nav_model": "MODELO DE RECUPERAÇÃO", "nav_contact": "CONTACTO", "hero_eyebrow": "Dublin • Irlanda • Setor marítimo", "hero_title_html": "Maritime Wage <span>Recovery & Claims</span> Administration", "hero_lead": "Recuperação baseada em provas de direitos laborais marítimos não pagos.", "hero_copy": "SMR Capital provides specialist forensic payroll auditing, maritime claims administration and commercial recovery support for seafarers and maritime stakeholders.", "btn_seafarers_html": "PARA MARÍTIMOS <span>→</span>", "btn_employers_html": "PARA EMPREGADORES <span>→</span>", "btn_submit_html": "ENVIAR CASO <span>→</span>", "assurance_title": "🛡 No upfront cost to seafarers", "assurance_text": "Assessment is free and confidential. You pay nothing to have your case reviewed.", "service_seafarers_title": "For Seafarers", "service_seafarers_text": "We review employment records, quantify unpaid entitlements and support structured recovery.", "service_employers_title": "For Employers", "service_employers_text": "Resolve historic wage liability exposure through structured and evidence-led commercial solutions.", "service_audit_title": "Forensic Audit", "service_audit_text": "We reconstruct payroll data, validate evidence and calculate potential financial shortfalls.", "service_resolution_title": "Commercial Resolution", "service_resolution_text": "We prioritise structured reconciliation before formal escalation where appropriate.", "service_legal_title": "Legal Escalation", "service_legal_text": "Cases may be escalated through independent legal practitioners where formal legal action is required.", "learn_more": "Learn More →", "seafarers_heading": "Understand what you may actually be owed.", "seafarers_intro": "SMR reviews employment agreements, payment history, work patterns and supporting evidence to reconstruct potential wage and employment-related financial shortfalls.", "evidence_heading": "Evidence we may review", "evidence_text1": "Seafarer employment agreements, payslips, bank records, cash payment records, rosters, hours of work/rest records, vessel details, travel receipts, messages and other relevant evidence.", "evidence_text2": "Every figure is classified as verified, calculated or disputed before being presented as part of a case.", "employers_panel_heading": "For Employers & Operators", "employers_panel_text1": "SMR's purpose is to identify and reconcile genuine financial discrepancies rather than inflate claims.", "employers_panel_text2": "Employers should have an opportunity to provide relevant contracts, payroll records, rosters and other documents before unresolved items are escalated.", "structured_resolution": "Structured Resolution", "employers_heading": "Resolve historic wage exposure before it becomes a larger dispute.", "employers_intro": "Evidence-led reconciliation can provide a more efficient route for both workers and operators where legitimate historic liabilities exist.", "process_eyebrow": "How It Works", "process_heading": "A five-stage claims process.", "process_intro": "Commercial, statutory and regulatory issues are separated so each matter follows the appropriate route.", "stage01": "STAGE 01", "stage02": "STAGE 02", "stage03": "STAGE 03", "stage04": "STAGE 04", "stage05": "STAGE 05", "intake_title": "Intake", "intake_text": "Confidential worker or employer case information and consent.", "evidence_stage_title": "Evidence", "evidence_stage_text": "Contracts, payments, hours, expenses and vessel documentation.", "audit_stage_title": "Audit", "audit_stage_text": "Forensic reconstruction and itemised financial claim ledger.", "resolution_stage_title": "Resolution", "resolution_stage_text": "Structured commercial reconciliation where appropriate.", "escalation_stage_title": "Escalation", "escalation_stage_text": "Independent legal or regulatory route where required.", "model_eyebrow": "Capital-Funded Recovery Model", "model_heading": "Designed to remove the upfront cost barrier.", "model_intro": "SMR Capital is being developed around privately funded case assessment and claims administration. Final remuneration structures remain subject to Irish legal and tax validation before operational deployment.", "three_track_heading": "Three-Track Architecture", "track_a_title": "Track A — Accrued Receivable", "track_a_text": "Verified or calculable contractual money potentially due.", "track_b_title": "Track B — Statutory / Contentious Claim", "track_b_text": "Issues requiring statutory processes, legal interpretation or adjudication.", "track_c_title": "Track C — Regulatory Matter", "track_c_text": "Potential maritime or employment compliance matters recorded separately.", "estimator_eyebrow": "Indicative Tool", "estimator_heading": "Wage Shortfall Estimator", "estimator_intro": "This gives a preliminary arithmetic estimate only and does not establish legal entitlement.", "days_label": "Days worked", "hours_label": "Average hours per day", "paid_label": "Average amount paid per day (€)", "benchmark_label": "Indicative benchmark hourly rate (€)", "calculate_btn": "CALCULATE ESTIMATE", "earned_label": "Indicative earned amount", "received_label": "Approx. amount paid", "shortfall_label": "Indicative shortfall", "calculator_note": "This calculator is not legal advice. Applicable wage rates, overtime, Sunday/public holiday entitlements, deductions, governing law, maritime agreements and worker status may alter the result.", "faq_eyebrow": "Frequently Asked Questions", "faq_heading": "Common questions.", "faq1_q": "Is the initial review free?", "faq1_a": "Yes. The intended model provides an initial confidential assessment without an upfront assessment charge.", "faq2_q": "Does the estimator show exactly what a worker is owed?", "faq2_a": "No. It is an indicative calculator. A proper case requires evidence and analysis of the applicable contractual and legal framework.", "faq3_q": "Can SMR bring every case to court itself?", "faq3_a": "No such representation is made. The correct claimant, assignment position and procedure depend on the nature of the right involved. Formal legal proceedings are referred through appropriately qualified legal practitioners where required.", "faq4_q": "What evidence should be kept?", "faq4_a": "Employment agreements, payslips, bank records, hours records, rosters, travel receipts, vessel information, messages and other evidence relevant to the employment arrangement.", "contact_secure_title": "Confidential • Secure • Professional", "contact_secure_text": "Initial submissions are handled confidentially and should contain only information necessary for an initial review.", "legal_eyebrow": "Legal Notice", "legal_heading": "Important information.", "legal_p1": "This website provides general information about the proposed services and operating model of SMR Capital and does not constitute legal, tax, employment, investment or financial advice.", "legal_p2": "SMR Capital is not presented as a firm of solicitors or barristers. Matters requiring regulated legal services, formal legal representation or contentious proceedings are to be referred to appropriately qualified independent legal practitioners.", "legal_p3": "References to wage recovery, receivables, claims or maritime compliance do not mean that every asserted entitlement is legally recoverable, assignable or enforceable by SMR. Each matter depends on the underlying evidence, contractual basis, applicable law and procedural route.", "legal_p4": "Website content, estimator outputs and preliminary assessments are indicative only and must not be relied upon as a definitive statement of liability or entitlement.", "rights_reserved": "All rights reserved.", "footer_tagline": "Dublin, Ireland • Maritime Wage Recovery & Claims Administration"}};
+
+    function normaliseLanguage(lang) {
+      if (!lang) return 'en';
+      const l = lang.toLowerCase();
+      if (l.startsWith('id')) return 'id';
+      if (l.startsWith('fil') || l.startsWith('tl')) return 'tl';
+      if (l.startsWith('pl')) return 'pl';
+      if (l.startsWith('ro')) return 'ro';
+      if (l.startsWith('uk')) return 'uk';
+      if (l.startsWith('es')) return 'es';
+      if (l.startsWith('pt')) return 'pt';
+      return 'en';
+    }
+
+    function applyLanguage(lang) {
+      const chosen = translations[lang] ? lang : 'en';
+      document.documentElement.lang = chosen;
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[chosen][key]) el.textContent = translations[chosen][key];
+      });
+      document.querySelectorAll('[data-i18n-html]').forEach(el => {
+        const key = el.getAttribute('data-i18n-html');
+        if (translations[chosen][key]) el.innerHTML = translations[chosen][key];
+      });
+      const selector = document.getElementById('languageSelect');
+      if (selector) selector.value = chosen;
+      localStorage.setItem('smr_language', chosen);
+    }
+
+    const savedLanguage = localStorage.getItem('smr_language');
+    const detectedLanguage = normaliseLanguage(navigator.language || (navigator.languages && navigator.languages[0]));
+    applyLanguage(savedLanguage || detectedLanguage);
+
+    const languageSelect = document.getElementById('languageSelect');
+    if (languageSelect) {
+      languageSelect.addEventListener('change', (event) => {
+        applyLanguage(event.target.value);
+      });
     }
 
     document.getElementById('year').textContent = new Date().getFullYear();
