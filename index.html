@@ -1,283 +1,1024 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SMR Capital Ltd | Maritime Asset Recovery</title>
-    <style>
-        :root {
-            --primary-dark: #0f172a;
-            --accent-gold: #c5a880;
-            --text-main: #334155;
-            --text-dark: #1e293b;
-            --bg-light: #f8fafc;
-            --alert-red: #dc2626;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SMR Capital provides maritime wage recovery support, forensic payroll auditing, claims administration and structured commercial resolution for seafarers and maritime stakeholders." />
+  <meta name="theme-color" content="#07111f" />
+  <title>SMR Capital | Maritime Wage Recovery & Claims Administration</title>
 
-        body { 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
-            color: var(--text-main); 
-            line-height: 1.7; 
-            margin: 0; 
-            padding: 0; 
-            background-color: var(--bg-light); 
-        }
-        
-        /* Elite Institutional Header Block */
-        .brand-header { 
-            background-color: var(--primary-dark); 
-            text-align: center; 
-            padding: 40px 20px 20px 20px; 
-        }
-        .brand-header img { 
-            max-width: 460px; 
-            width: 100%; 
-            height: auto; 
-        }
+  <style>
+    :root{
+      --navy:#07111f;
+      --navy-2:#0c1b2d;
+      --navy-3:#10263f;
+      --gold:#c8a45b;
+      --gold-soft:#e0c98d;
+      --text:#edf2f7;
+      --muted:#a9b6c7;
+      --light:#f5f7fa;
+      --ink:#152033;
+      --line:rgba(255,255,255,.12);
+      --shadow:0 24px 60px rgba(0,0,0,.25);
+      --radius:18px;
+      --max:1180px;
+    }
 
-        /* Top Institutional Navigation Bar */
-        nav {
-            background-color: var(--primary-dark);
-            border-bottom: 4px solid var(--accent-gold);
-            text-align: center;
-            padding: 10px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        nav button {
-            background: none;
-            border: none;
-            color: #94a3b8;
-            font-size: 13px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            padding: 10px 20px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        nav button:hover, nav button.active {
-            color: #ffffff;
-            border-bottom: 2px solid var(--accent-gold);
-        }
-        
-        .container { 
-            max-width: 850px; 
-            margin: 0 auto; 
-            padding: 60px 20px; 
-        }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:var(--navy);
+      color:var(--text);
+      line-height:1.6;
+    }
 
-        /* Smooth Multi-Section Switching Core Layout */
-        .tab-content {
-            display: none;
-            animation: fadeIn 0.4s ease-in-out;
-        }
-        .tab-content.active {
-            display: block;
-        }
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    button,input,select,textarea{font:inherit}
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        /* Institutional Typography styling */
-        h2 { 
-            font-size: 15px; 
-            font-weight: 700; 
-            color: #b45309; 
-            text-transform: uppercase; 
-            letter-spacing: 2px; 
-            margin-top: 40px; 
-            margin-bottom: 20px; 
-            border-bottom: 1px solid #e2e8f0; 
-            padding-bottom: 8px; 
-        }
-        h3 {
-            font-size: 20px;
-            color: var(--primary-dark);
-            margin-top: 0;
-            font-weight: 600;
-        }
-        p { 
-            font-size: 15px; 
-            color: var(--text-main); 
-            text-align: justify; 
-            margin-bottom: 20px; 
-        }
-        ul { 
-            padding-left: 20px; 
-            margin-bottom: 30px; 
-        }
-        li { 
-            font-size: 15px; 
-            color: var(--text-main); 
-            margin-bottom: 12px; 
-            text-align: justify; 
-        }
+    .container{
+      width:min(calc(100% - 32px), var(--max));
+      margin:0 auto;
+    }
 
-        .grid-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
-        }
-        .card {
-            background: #ffffff;
-            padding: 25px;
-            border-radius: 6px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-            border-top: 3px solid var(--accent-gold);
-        }
-        .card h4 {
-            margin-top: 0;
-            color: var(--primary-dark);
-            font-size: 16px;
-            margin-bottom: 10px;
-        }
-        
-        /* Interactive Claim Estimator Widget Block */
-        .estimator-widget {
-            background-color: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            padding: 30px;
-            margin: 40px 0;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
-        }
-        .form-group {
-            margin-bottom: 20px;
-        }
-        .form-group label {
-            display: block;
-            font-size: 13px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 8px;
-            color: var(--text-dark);
-        }
-        .form-group input, .form-group select {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #cbd5e1;
-            border-radius: 4px;
-            box-sizing: border-box;
-            font-size: 15px;
-        }
-        .calc-btn {
-            background-color: var(--primary-dark);
-            color: #ffffff;
-            border: none;
-            width: 100%;
-            padding: 14px;
-            font-size: 14px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.2s;
-        }
-        .calc-btn:hover {
-            background-color: #1e293b;
-        }
-        .estimator-result {
-            display: none;
-            margin-top: 25px;
-            padding: 20px;
-            background-color: #f1f5f9;
-            border-left: 4px solid var(--accent-gold);
-            border-radius: 0 4px 4px 0;
-        }
+    .eyebrow{
+      color:var(--gold-soft);
+      text-transform:uppercase;
+      letter-spacing:.16em;
+      font-size:.78rem;
+      font-weight:700;
+    }
 
-        /* High-Security Confidentiality Alert Block */
-        .confidential-block { 
-            background-color: #ffffff; 
-            border-left: 4px solid var(--alert-red); 
-            padding: 35px; 
-            margin: 50px 0; 
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); 
-            border-radius: 0 8px 8px 0; 
-        }
-        .confidential-block h3 { 
-            margin-top: 0; 
-            font-size: 15px; 
-            color: #991b1b; 
-            text-transform: uppercase; 
-            letter-spacing: 1.5px; 
-        }
-        
-        /* Contact Form Layout */
-        .contact-form-wrapper {
-            background: #ffffff;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
-            border: 1px solid #e2e8f0;
-        }
-        .contact-form-wrapper textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #cbd5e1;
-            border-radius: 4px;
-            box-sizing: border-box;
-            font-size: 15px;
-            height: 120px;
-            resize: vertical;
-        }
-        
-        footer { 
-            margin-top: 100px; 
-            font-size: 11px; 
-            color: #64748b; 
-            border-top: 1px solid #e2e8f0; 
-            padding-top: 40px; 
-            padding-bottom: 40px;
-            text-align: center; 
-            letter-spacing: 0.5px; 
-        }
-    </style>
+    .site-header{
+      position:sticky;
+      top:0;
+      z-index:100;
+      background:rgba(7,17,31,.92);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid var(--line);
+    }
+
+    .nav{
+      min-height:76px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-weight:800;
+      letter-spacing:.08em;
+    }
+
+    .brand-mark{
+      width:38px;
+      height:38px;
+      border:1px solid var(--gold);
+      display:grid;
+      place-items:center;
+      border-radius:10px;
+      color:var(--gold);
+      font-family:Georgia, serif;
+      font-size:1.15rem;
+    }
+
+    .brand small{
+      display:block;
+      color:var(--muted);
+      font-size:.67rem;
+      letter-spacing:.12em;
+      margin-top:2px;
+      font-weight:600;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:22px;
+      align-items:center;
+      font-size:.92rem;
+      color:#d6deea;
+    }
+
+    .nav-links a:hover{color:var(--gold-soft)}
+
+    .nav-cta{
+      padding:10px 15px;
+      border:1px solid var(--gold);
+      border-radius:999px;
+      color:var(--gold-soft);
+    }
+
+    .menu-btn{
+      display:none;
+      border:1px solid var(--line);
+      background:transparent;
+      color:white;
+      border-radius:10px;
+      padding:8px 11px;
+      cursor:pointer;
+    }
+
+    .hero{
+      position:relative;
+      overflow:hidden;
+      padding:110px 0 88px;
+      background:
+        radial-gradient(circle at 80% 20%, rgba(200,164,91,.11), transparent 28%),
+        linear-gradient(135deg, #07111f 0%, #0b1a2c 58%, #0a1422 100%);
+    }
+
+    .hero:after{
+      content:"";
+      position:absolute;
+      inset:auto 0 0 0;
+      height:1px;
+      background:linear-gradient(90deg, transparent, rgba(200,164,91,.4), transparent);
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.25fr .75fr;
+      align-items:center;
+      gap:64px;
+    }
+
+    .hero h1{
+      font-family:Georgia, "Times New Roman", serif;
+      font-size:clamp(3rem, 7vw, 6.4rem);
+      line-height:.94;
+      margin:.15em 0 .22em;
+      letter-spacing:-.04em;
+    }
+
+    .hero h1 span{color:var(--gold-soft)}
+
+    .hero-sub{
+      max-width:760px;
+      color:#c5d0dd;
+      font-size:1.1rem;
+      margin:0 0 30px;
+    }
+
+    .hero-actions{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      padding:13px 18px;
+      border-radius:10px;
+      border:1px solid transparent;
+      font-weight:750;
+      cursor:pointer;
+      transition:.2s ease;
+    }
+
+    .btn-primary{
+      background:var(--gold);
+      color:#0b1220;
+    }
+
+    .btn-primary:hover{transform:translateY(-1px);filter:brightness(1.05)}
+
+    .btn-secondary{
+      border-color:rgba(255,255,255,.22);
+      color:white;
+      background:rgba(255,255,255,.03);
+    }
+
+    .btn-secondary:hover{border-color:var(--gold);color:var(--gold-soft)}
+
+    .hero-panel{
+      background:rgba(255,255,255,.045);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:26px;
+      box-shadow:var(--shadow);
+    }
+
+    .hero-panel h3{margin-top:0}
+
+    .mini-steps{
+      display:grid;
+      gap:14px;
+      margin-top:20px;
+    }
+
+    .mini-step{
+      display:grid;
+      grid-template-columns:34px 1fr;
+      gap:12px;
+      align-items:start;
+    }
+
+    .mini-step strong{
+      width:34px;
+      height:34px;
+      border-radius:50%;
+      border:1px solid rgba(200,164,91,.55);
+      color:var(--gold-soft);
+      display:grid;
+      place-items:center;
+      font-size:.82rem;
+    }
+
+    section{padding:84px 0}
+
+    .section-head{
+      max-width:780px;
+      margin-bottom:36px;
+    }
+
+    .section-head h2{
+      font-family:Georgia, "Times New Roman", serif;
+      font-size:clamp(2rem, 4vw, 3.4rem);
+      margin:.1em 0 .28em;
+      line-height:1.08;
+      letter-spacing:-.025em;
+    }
+
+    .section-head p{color:var(--muted);font-size:1.04rem}
+
+    .light{
+      background:var(--light);
+      color:var(--ink);
+    }
+
+    .light .section-head p{color:#526073}
+    .light .eyebrow{color:#8b6b2f}
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:18px;
+    }
+
+    .card{
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.035);
+      border-radius:var(--radius);
+      padding:26px;
+    }
+
+    .light .card{
+      background:white;
+      border-color:#dde3ea;
+      box-shadow:0 12px 35px rgba(15,31,53,.06);
+    }
+
+    .card h3{margin:0 0 10px}
+    .card p{margin:0;color:var(--muted)}
+    .light .card p{color:#5d6877}
+
+    .icon{
+      width:42px;height:42px;
+      border-radius:12px;
+      display:grid;place-items:center;
+      margin-bottom:18px;
+      border:1px solid rgba(200,164,91,.45);
+      color:var(--gold-soft);
+      font-weight:800;
+    }
+
+    .light .icon{color:#86652b;background:#fffaf0}
+
+    .process{
+      display:grid;
+      grid-template-columns:repeat(5,1fr);
+      gap:14px;
+    }
+
+    .process-step{
+      position:relative;
+      padding:24px 18px;
+      border-top:2px solid var(--gold);
+      background:rgba(255,255,255,.035);
+      border-radius:0 0 14px 14px;
+    }
+
+    .process-step span{
+      font-size:.75rem;
+      color:var(--gold-soft);
+      font-weight:800;
+      letter-spacing:.11em;
+    }
+
+    .process-step h4{margin:8px 0 5px}
+    .process-step p{margin:0;color:var(--muted);font-size:.9rem}
+
+    .split{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:34px;
+      align-items:start;
+    }
+
+    .checklist{
+      display:grid;
+      gap:12px;
+      margin-top:20px;
+    }
+
+    .check{
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+    }
+
+    .tick{
+      width:22px;height:22px;
+      border-radius:50%;
+      border:1px solid var(--gold);
+      display:grid;place-items:center;
+      flex:0 0 auto;
+      color:var(--gold-soft);
+      font-size:.78rem;
+      margin-top:2px;
+    }
+
+    .notice{
+      border-left:3px solid var(--gold);
+      background:rgba(200,164,91,.075);
+      padding:18px 20px;
+      border-radius:0 12px 12px 0;
+      color:#dce5ef;
+    }
+
+    .light .notice{color:#374252;background:#fff7e7}
+
+    .estimator{
+      background:white;
+      border-radius:var(--radius);
+      padding:30px;
+      color:var(--ink);
+      box-shadow:var(--shadow);
+    }
+
+    .form-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:16px;
+    }
+
+    label{
+      display:block;
+      font-weight:700;
+      font-size:.88rem;
+      margin-bottom:7px;
+    }
+
+    input, select, textarea{
+      width:100%;
+      border:1px solid #cfd7e2;
+      border-radius:10px;
+      padding:12px 13px;
+      background:#fff;
+      color:#111827;
+      outline:none;
+    }
+
+    input:focus,select:focus,textarea:focus{
+      border-color:#a98a48;
+      box-shadow:0 0 0 3px rgba(200,164,91,.15);
+    }
+
+    .results{
+      margin-top:20px;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:12px;
+    }
+
+    .result{
+      background:#f3f6f9;
+      border:1px solid #dce2e9;
+      border-radius:12px;
+      padding:16px;
+    }
+
+    .result small{display:block;color:#677386;margin-bottom:5px}
+    .result strong{font-size:1.3rem}
+
+    .disclaimer{
+      margin-top:16px;
+      color:#687588;
+      font-size:.8rem;
+    }
+
+    .faq{
+      display:grid;
+      gap:10px;
+      max-width:900px;
+    }
+
+    details{
+      border:1px solid var(--line);
+      border-radius:12px;
+      padding:0 18px;
+      background:rgba(255,255,255,.025);
+    }
+
+    summary{
+      cursor:pointer;
+      padding:18px 0;
+      font-weight:750;
+    }
+
+    details p{
+      color:var(--muted);
+      padding:0 0 18px;
+      margin:0;
+    }
+
+    .contact-wrap{
+      display:grid;
+      grid-template-columns:.8fr 1.2fr;
+      gap:34px;
+    }
+
+    .contact-box{
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:28px;
+      background:rgba(255,255,255,.035);
+    }
+
+    .contact-row{
+      padding:14px 0;
+      border-bottom:1px solid var(--line);
+    }
+
+    .contact-row:last-child{border-bottom:0}
+
+    .footer{
+      padding:34px 0 44px;
+      border-top:1px solid var(--line);
+      color:#91a0b4;
+      font-size:.84rem;
+    }
+
+    .footer-grid{
+      display:flex;
+      justify-content:space-between;
+      gap:24px;
+      flex-wrap:wrap;
+    }
+
+    .legal{
+      max-width:900px;
+      font-size:.86rem;
+      color:#9eabbc;
+    }
+
+    .badge-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:20px;
+    }
+
+    .badge{
+      border:1px solid rgba(255,255,255,.16);
+      padding:7px 10px;
+      border-radius:999px;
+      color:#c9d3df;
+      font-size:.78rem;
+    }
+
+    @media (max-width: 900px){
+      .hero-grid,.split,.contact-wrap{grid-template-columns:1fr}
+      .cards{grid-template-columns:1fr 1fr}
+      .process{grid-template-columns:1fr 1fr}
+      .nav-links{
+        display:none;
+        position:absolute;
+        top:76px;
+        left:16px;
+        right:16px;
+        padding:16px;
+        border-radius:14px;
+        flex-direction:column;
+        align-items:stretch;
+        background:#0a1727;
+        border:1px solid var(--line);
+      }
+      .nav-links.open{display:flex}
+      .menu-btn{display:block}
+    }
+
+    @media (max-width: 620px){
+      .cards,.process,.form-grid,.results{grid-template-columns:1fr}
+      .hero{padding-top:78px}
+      section{padding:66px 0}
+      .hero-panel{padding:21px}
+    }
+  </style>
 </head>
+
 <body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="SMR Capital home">
+        <span class="brand-mark">SMR</span>
+        <span>
+          SMR CAPITAL
+          <small>MARITIME CLAIMS & RECOVERY</small>
+        </span>
+      </a>
 
-    <!-- Institutional Header Logo Node -->
-    <div class="brand-header">
-        <img src="logo.png" alt="SMR Capital Ltd Logo">
+      <nav class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#process">How It Works</a>
+        <a href="#estimator">Estimator</a>
+        <a href="#compliance">Compliance</a>
+        <a href="#contact" class="nav-cta">Secure Contact</a>
+      </nav>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">Menu</button>
     </div>
+  </header>
 
-    <!-- Competitor Navigation Track -->
-    <nav>
-        <button class="nav-link active" onclick="switchTab('who-we-are', this)">Who We Are</button>
-        <button class="nav-link" onclick="switchTab('what we do', this)">What We Do</button>
-        <button class="nav-link" onclick="switchTab('no-win-no-fee', this)">No-Win No-Fee Framework</button>
-        <button class="nav-link" onclick="switchTab('contact-us', this)">Secure Port / Contact</button>
-    </nav>
-    
-    <div class="container">
-        <main>
-            
-            <!-- SECTION 1: WHO WE ARE -->
-            <div id="who-we-are" class="tab-content active">
-                <h3>Institutional Capital Risk Partners</h3>
-                <p>Incorporated in Dublin, Ireland, <strong>SMR Capital Ltd</strong> operates as a private, highly structured claims management vehicle and corporate risk partnership. We specialize exclusively in forensic payroll transparency audits, the legal assignment of cross-border debts, and the deployment of private liquidity reserves to resolve systemic structural liabilities within the maritime sector.</p>
-                
-                <p>Unlike standard civil agencies, SMR Capital Ltd does not act as a traditional public advisory service or labor union. We interface with the market purely as an institutional asset acquirer under the strict provisions of Section 28(6) of the <em>Supreme Court of Judicature (Ireland) Act 1877</em>. This statutory mechanism permits us to take complete legal and beneficial assignment of accrued corporate wage debts, positioning our entity as the exclusive sole plaintiff in subsequent out-of-court arbitrations and civil court litigations.</p>
-                
-                <h2>Our Governance Principles</h2>
-                <div class="grid-cards">
-                    <div class="card">
-                        <h4>Territorial Integrity</h4>
-                        <p>We ensure that any commercial vessel or operator executing regular transit routes within internal Irish waters conforms entirely to the domestic wage baselines of the state, neutralizing foreign-flag avoidance models.</p>
-                    </div>
-                    <div class="card">
-                        <h4>Capital Resilience</h4>
-                        <p>Our claims operations are completely self-funded via independent private capital pools, ensuring we have the financial endurance to litigate contested portfolios through to the High Court of Ireland.</p>
-                    </div>
-                </div>
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Dublin • Ireland • Maritime Sector</div>
+          <h1>Maritime Wage <span>Recovery</span> & Claims Administration</h1>
+          <p class="hero-sub">
+            SMR Capital provides evidence-led forensic payroll auditing, maritime claims administration and structured commercial recovery support for seafarers and maritime stakeholders.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Start a Confidential Review</a>
+            <a class="btn btn-secondary" href="#process">See How It Works</a>
+          </div>
+
+          <div class="badge-row">
+            <span class="badge">Forensic wage reconciliation</span>
+            <span class="badge">Cross-border maritime claims</span>
+            <span class="badge">No upfront assessment fee</span>
+          </div>
+        </div>
+
+        <aside class="hero-panel">
+          <div class="eyebrow">Structured Recovery</div>
+          <h3>From evidence to resolution.</h3>
+          <p style="color:var(--muted)">
+            We separate verified receivables, disputed employment claims and regulatory issues so each case follows the appropriate commercial or legal route.
+          </p>
+
+          <div class="mini-steps">
+            <div class="mini-step"><strong>01</strong><div><b>Evidence Review</b><br><span style="color:var(--muted)">Contracts, wages, hours, payments and expenses.</span></div></div>
+            <div class="mini-step"><strong>02</strong><div><b>Forensic Audit</b><br><span style="color:var(--muted)">Reconstruct what was earned, paid and potentially outstanding.</span></div></div>
+            <div class="mini-step"><strong>03</strong><div><b>Claim Classification</b><br><span style="color:var(--muted)">Separate contractual, statutory and regulatory issues.</span></div></div>
+            <div class="mini-step"><strong>04</strong><div><b>Commercial Resolution</b><br><span style="color:var(--muted)">Evidence-led reconciliation before escalation.</span></div></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about" class="light">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Who We Are</div>
+          <h2>Specialist maritime claims administration built around evidence.</h2>
+          <p>
+            SMR Capital is being developed as a private maritime claims and receivables business focused on identifying, quantifying, documenting and resolving legitimate employment-related financial shortfalls.
+          </p>
+        </div>
+
+        <div class="cards">
+          <div class="card">
+            <div class="icon">A</div>
+            <h3>Forensic Payroll Audits</h3>
+            <p>We reconstruct wage entitlement using contracts, payment history, hours worked, vessel records and supporting evidence.</p>
+          </div>
+          <div class="card">
+            <div class="icon">B</div>
+            <h3>Claims Administration</h3>
+            <p>We organise the factual case, build the claim ledger, maintain evidence files and support commercial resolution.</p>
+          </div>
+          <div class="card">
+            <div class="icon">C</div>
+            <h3>Maritime Focus</h3>
+            <p>Our model is designed around seafarer employment, vessel operations, cross-border working arrangements and maritime compliance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">What We Review</div>
+          <h2>Financial shortfalls arising from maritime employment.</h2>
+          <p>
+            Every case is reviewed individually. Potential entitlement depends on the contract, employment status, applicable law, evidence and the facts of the voyage or employment arrangement.
+          </p>
+        </div>
+
+        <div class="cards">
+          <div class="card">
+            <h3>Unpaid or Underpaid Wages</h3>
+            <p>Contractual wages, identifiable payment shortfalls and other accrued remuneration.</p>
+          </div>
+          <div class="card">
+            <h3>Hours & Overtime</h3>
+            <p>Reconstruction of actual working patterns where hours or overtime may affect entitlement.</p>
+          </div>
+          <div class="card">
+            <h3>Allowances & Expenses</h3>
+            <p>Contractual allowances, reimbursable expenses, flights, travel or repatriation costs where supported.</p>
+          </div>
+          <div class="card">
+            <h3>Sunday & Holiday Issues</h3>
+            <p>Potential statutory or contractual entitlements are separately identified and classified.</p>
+          </div>
+          <div class="card">
+            <h3>Seafarer Employment Agreements</h3>
+            <p>Review of wage provisions, payment terms, employment conditions and documentary inconsistencies.</p>
+          </div>
+          <div class="card">
+            <h3>Regulatory Indicators</h3>
+            <p>Potential maritime compliance issues are recorded separately from the commercial recovery process.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="light">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">How It Works</div>
+          <h2>A disciplined five-stage recovery process.</h2>
+          <p>
+            The objective is to resolve genuine financial discrepancies through evidence and structured reconciliation, while escalating legal issues through the proper professional channels where required.
+          </p>
+        </div>
+
+        <div class="process">
+          <div class="process-step">
+            <span>STAGE 01</span>
+            <h4>Intake</h4>
+            <p>Confidential case information and consent.</p>
+          </div>
+          <div class="process-step">
+            <span>STAGE 02</span>
+            <h4>Evidence</h4>
+            <p>Contracts, records, payments and supporting documents.</p>
+          </div>
+          <div class="process-step">
+            <span>STAGE 03</span>
+            <h4>Audit</h4>
+            <p>Forensic reconstruction and claim ledger.</p>
+          </div>
+          <div class="process-step">
+            <span>STAGE 04</span>
+            <h4>Resolution</h4>
+            <p>Commercial reconciliation where appropriate.</p>
+          </div>
+          <div class="process-step">
+            <span>STAGE 05</span>
+            <h4>Escalation</h4>
+            <p>Independent legal or regulatory route where required.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container split">
+        <div>
+          <div class="eyebrow">For Seafarers</div>
+          <h2 style="font-family:Georgia,serif;font-size:2.5rem;margin:.15em 0 .3em">No upfront assessment cost.</h2>
+          <p style="color:var(--muted)">
+            A worker should be able to understand the value and evidence behind a potential claim before deciding what to do next.
+          </p>
+          <div class="checklist">
+            <div class="check"><span class="tick">✓</span><div>Confidential preliminary review</div></div>
+            <div class="check"><span class="tick">✓</span><div>Evidence checklist and case file creation</div></div>
+            <div class="check"><span class="tick">✓</span><div>Wage and payment reconstruction</div></div>
+            <div class="check"><span class="tick">✓</span><div>Clear separation of verified and disputed amounts</div></div>
+            <div class="check"><span class="tick">✓</span><div>Commercial resolution pathway where appropriate</div></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="eyebrow">For Employers & Operators</div>
+          <h2 style="font-family:Georgia,serif;font-size:2.5rem;margin:.15em 0 .3em">Evidence-led reconciliation.</h2>
+          <p style="color:var(--muted)">
+            SMR's objective is not to inflate claims. It is to establish a documented account of what was contractually or legally due and what was actually paid.
+          </p>
+          <div class="notice">
+            Employers should have an opportunity to provide payroll records, contracts, rosters and other documents relevant to the calculation before unresolved items are escalated.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="estimator" class="light">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Indicative Tool</div>
+          <h2>Forensic Wage Shortfall Estimator</h2>
+          <p>
+            This tool gives a basic preliminary estimate only. It does not establish legal entitlement and does not include statutory compensation, interest or disputed legal claims.
+          </p>
+        </div>
+
+        <div class="estimator">
+          <div class="form-grid">
+            <div>
+              <label for="days">Days worked</label>
+              <input id="days" type="number" min="0" value="300" />
+            </div>
+            <div>
+              <label for="hours">Average hours per day</label>
+              <input id="hours" type="number" min="0" step="0.5" value="12" />
+            </div>
+            <div>
+              <label for="paid">Average amount actually paid per day (€)</label>
+              <input id="paid" type="number" min="0" step="0.01" value="120" />
+            </div>
+            <div>
+              <label for="benchmark">Indicative benchmark hourly rate (€)</label>
+              <input id="benchmark" type="number" min="0" step="0.01" value="13.50" />
+            </div>
+          </div>
+
+          <div style="margin-top:16px">
+            <button class="btn btn-primary" type="button" onclick="calculateEstimate()">Calculate Estimate</button>
+          </div>
+
+          <div class="results">
+            <div class="result">
+              <small>Indicative earned amount</small>
+              <strong id="earned">€0.00</strong>
+            </div>
+            <div class="result">
+              <small>Approx. amount paid</small>
+              <strong id="received">€0.00</strong>
+            </div>
+            <div class="result">
+              <small>Indicative shortfall</small>
+              <strong id="shortfall">€0.00</strong>
+            </div>
+          </div>
+
+          <p class="disclaimer">
+            Important: this calculator is not legal advice and is not a definitive claim valuation. Applicable minimum rates, overtime rules, Sunday/public holiday entitlements, maritime agreements, tax, deductions, governing law and worker status may materially change the result.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="compliance">
+      <div class="container split">
+        <div>
+          <div class="eyebrow">Maritime Compliance</div>
+          <h2 style="font-family:Georgia,serif;font-size:2.7rem;margin:.15em 0 .35em">Commercial recovery and regulatory compliance are kept separate.</h2>
+          <p style="color:var(--muted)">
+            Maritime employment can involve domestic employment law, seafarer employment agreements, flag-state requirements, port-state oversight and the Maritime Labour Convention framework.
+          </p>
+          <p style="color:var(--muted)">
+            SMR records relevant regulatory indicators as part of the evidence file, but a commercial payment is not treated as consideration for withholding a legitimate regulatory report.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Three-Track Case Architecture</h3>
+          <p><b style="color:white">Track A — Accrued Receivable</b><br>Verified or calculable contractual money potentially due.</p>
+          <br>
+          <p><b style="color:white">Track B — Statutory / Contentious Claim</b><br>Issues requiring legal interpretation, statutory procedures or adjudication.</p>
+          <br>
+          <p><b style="color:white">Track C — Regulatory Matter</b><br>Potential maritime or employment compliance concerns maintained separately.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="light">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Capital-Funded Model</div>
+          <h2>Designed to remove the upfront-cost barrier.</h2>
+          <p>
+            SMR Capital is being developed around privately funded case assessment and administration. Commercial remuneration structures remain subject to final Irish legal and tax validation before operational deployment.
+          </p>
+        </div>
+
+        <div class="notice">
+          SMR does not presently represent that every employment claim can be assigned to it, that it can act as sole plaintiff in every matter, or that any particular litigation funding structure is legally available. Matters requiring legal services or formal proceedings are to be referred to appropriately qualified independent legal practitioners.
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Frequently Asked Questions</div>
+          <h2>Common questions.</h2>
+        </div>
+
+        <div class="faq">
+          <details>
+            <summary>Does SMR Capital charge a worker to review a potential case?</summary>
+            <p>The intended model provides a preliminary assessment without an upfront assessment charge. Any later commercial terms would be clearly disclosed and agreed before proceeding.</p>
+          </details>
+
+          <details>
+            <summary>Does the estimator tell me exactly what I am owed?</summary>
+            <p>No. It is an indicative arithmetic tool only. A real case requires contracts, payment records, hours, employment dates and analysis of the applicable legal framework.</p>
+          </details>
+
+          <details>
+            <summary>Can SMR take an employer to court?</summary>
+            <p>That depends on the legal nature of the underlying right, whether it is lawfully assignable and the appropriate procedure. Formal legal proceedings and contentious legal services are handled through appropriately qualified legal practitioners where required.</p>
+          </details>
+
+          <details>
+            <summary>What evidence should a seafarer keep?</summary>
+            <p>Employment agreements, payslips, bank records, rosters, hours of work/rest records, vessel details, travel receipts, messages, photographs and any written information describing the agreed wage or working arrangement.</p>
+          </details>
+
+          <details>
+            <summary>Will SMR report an employer to regulators?</summary>
+            <p>Commercial recovery and regulatory matters are treated separately. Regulatory action depends on the facts, applicable obligations and appropriate professional or legal advice.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="light">
+      <div class="container contact-wrap">
+        <div>
+          <div class="eyebrow">Secure Contact</div>
+          <h2 style="font-family:Georgia,serif;font-size:2.7rem;margin:.15em 0 .3em">Request a confidential case review.</h2>
+          <p style="color:#5f6b7a">
+            Do not send original identity documents through an unsecured public form. Initial contact should contain only enough information for us to understand the nature of the issue.
+          </p>
+
+          <div class="contact-box" style="background:white;border-color:#dde3ea;color:#182235">
+            <div class="contact-row">
+              <strong>Email</strong><br>
+              <a href="mailto:smrcapital@proton.me" style="color:#7d5f28">smrcapital@proton.me</a>
+            </div>
+            <div class="contact-row">
+              <strong>Jurisdiction</strong><br>
+              Dublin, Ireland
+            </div>
+            <div class="contact-row">
+              <strong>Status</strong><br>
+              Development / pre-launch
+            </div>
+          </div>
+        </div>
+
+        <div class="estimator">
+          <h3 style="margin-top:0">Initial Case Summary</h3>
+          <form onsubmit="prepareEmail(event)">
+            <div class="form-grid">
+              <div>
+                <label for="name">Name or preferred identifier</label>
+                <input id="name" required />
+              </div>
+              <div>
+                <label for="nationality">Nationality</label>
+                <input id="nationality" />
+              </div>
+              <div>
+                <label for="vessel">Vessel / employer</label>
+                <input id="vessel" />
+              </div>
+              <div>
+                <label for="period">Employment period</label>
+                <input id="period" placeholder="e.g. Jan 2025 – present" />
+              </div>
             </div>
 
-            <!-- SECTION 2: WHAT WE DO -->
-            <div id="what-we-do" class="tab-content">
-                <h3>Forensic Liability Extraction & Maritime Enforcement</h3>
+            <div style="margin-top:16px">
+              <label for="summary">Brief summary</label>
+              <textarea id="summary" rows="6" placeholder="Describe the wage, hours, payment or employment issue."></textarea>
+            </div>
+
+            <div style="margin-top:16px">
+              <button class="btn btn-primary" type="submit">Prepare Secure Email</button>
+            </div>
+
+            <p class="disclaimer">
+              This form does not transmit information to a server. It prepares an email in your device's email application. Do not include passwords, banking credentials or unnecessary identity information.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Legal Notice</div>
+          <h2>Important information about this website.</h2>
+        </div>
+
+        <div class="legal">
+          <p>
+            This website provides general information about the proposed services and operating model of SMR Capital. It does not constitute legal, tax, employment, investment or financial advice.
+          </p>
+          <p>
+            SMR Capital is not presented on this website as a firm of solicitors or barristers. Where a matter requires legal advice, representation, formal proceedings or another regulated legal service, appropriately qualified independent legal professionals should be engaged.
+          </p>
+          <p>
+            References to wage recovery, receivables, claims or maritime compliance do not mean that every asserted entitlement is legally recoverable, assignable or enforceable by SMR. Each matter depends on its evidence, contractual basis, applicable law and procedural route.
+          </p>
+          <p>
+            Website content, estimator outputs and preliminary case reviews are indicative only and must not be relied on as a definitive statement of liability or entitlement.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>© <span id="year"></span> SMR Capital. All rights reserved.</div>
+      <div>Maritime Wage Recovery • Claims Administration • Forensic Payroll Auditing</div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+
+    menuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+
+    document.querySelectorAll('#navLinks a').forEach(link => {
+      link.addEventListener('click', () => navLinks.classList.remove('open'));
+    });
+
+    function euro(value){
+      return new Intl.NumberFormat('en-IE', {
+        style:'currency',
+        currency:'EUR'
+      }).format(value || 0);
+    }
+
+    function calculateEstimate(){
+      const days = parseFloat(document.getElementById('days').value) || 0;
+      const hours = parseFloat(document.getElementById('hours').value) || 0;
+      const paid = parseFloat(document.getElementById('paid').value) || 0;
+      const benchmark = parseFloat(document.getElementById('benchmark').value) || 0;
+
+      const earned = days * hours * benchmark;
+      const received = days * paid;
+      const shortfall = Math.max(0, earned - received);
+
+      document.getElementById('earned').textContent = euro(earned);
+      document.getElementById('received').textContent = euro(received);
+      document.getElementById('shortfall').textContent = euro(shortfall);
+    }
+
+    function prepareEmail(event){
+      event.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const nationality = document.getElementById('nationality').value;
+      const vessel = document.getElementById('vessel').value;
+      const period = document.getElementById('period').value;
+      const summary = document.getElementById('summary').value;
+
+      const subject = encodeURIComponent('Confidential Maritime Case Review');
+      const body = encodeURIComponent(
+`CONFIDENTIAL CASE REVIEW
+
+Name / Identifier: ${name}
+Nationality: ${nationality}
+Vessel / Employer: ${vessel}
+Employment Period: ${period}
+
+Brief Summary:
+${summary}
+
+I am contacting SMR Capital to request an initial confidential review.`
+      );
+
+      window.location.href = `mailto:smrcapital@proton.me?subject=${subject}&body=${body}`;
+    }
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+    calculateEstimate();
+  </script>
+</body>
+</html>
